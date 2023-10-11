@@ -6,14 +6,8 @@ function categoryTitle(categoryTitle) {
   titleWords.forEach((word, index) => {
     const createSpan = document.createElement('span');
 
-    if (index === 0 && titleWords.length === 2) {
-      createSpan.style.color = 'black';
-    } else {
+    if (index === titleWords.length - 1) {
       createSpan.style.color = 'blue';
-    }
-
-    if (index < 2 && titleWords.length > 2) {
-      createSpan.style.color = 'black';
     }
 
     createSpan.textContent = word + ' ';
