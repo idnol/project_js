@@ -1,18 +1,12 @@
 const booksCategoryTitle = document.querySelector('.books-category-title');
 
-function categoryTitle(categoryTitle) {
-  const titleWords = categoryTitle.split(' ');
-
-  titleWords.forEach((word, index) => {
-    const createSpan = document.createElement('span');
-
-    if (index === titleWords.length - 1) {
-      createSpan.style.color = 'blue';
-    }
-
-    createSpan.textContent = word + ' ';
-    booksCategoryTitle.appendChild(createSpan);
-  });
+function wrapLastWordTitle(categoryTitle) {
+  const titleWords = categoryTitle.trim().split(' ');
+  const lastTitleWord = titleWords[titleWords.length - 1];
+  const addSpanToLastWord = document.createElement('span');
+  addSpanToLastWord.textContent = lastTitleWord;
+  titleWords[titleWords.length - 1] = addSpanToLastWord.outerHTML;
+  booksCategoryTitle.innerHTML = titleWords.join(' ');
 }
 
-export { categoryTitle };
+export { wrapLastWordTitle };

@@ -10,6 +10,10 @@
   margin-bottom: 40px;
 }
 
+.books-category-title span {
+  color: #4f2ee8;
+}
+
 .books-gallery {
   display: flex;
   flex-wrap: wrap;
