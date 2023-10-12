@@ -117,7 +117,7 @@
   }
 }
 .shopping-list .book_content {
-  width: calc(100% - 114px);
+  width: calc(100% - 140px);
 }
 
 @media (min-width: 768px) {
@@ -181,6 +181,9 @@
   /* white-space: nowrap; */
   color: #111;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   font-family: DM Sans;
   font-size: 14px;
   font-style: normal;
