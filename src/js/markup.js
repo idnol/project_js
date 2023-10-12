@@ -6,8 +6,9 @@ function getCategoryMarkup(listResult) {
     }).join('');
 
     const markup = `
-        <p class="all-category-link">All categories</p>
+        
         <ul class='categories'>
+        <li class="categories-item js-category list">All categories</li>
             ${categoriesList}
         </ul>`;
     
