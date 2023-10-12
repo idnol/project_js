@@ -112,14 +112,15 @@ color: rgba(0, 0, 0, 0.60);
 }
 .shopping-list .book_image-block{
         display: block;
-            width: 100px;
-            height: 142px;
-            border-radius: 8px;
+        width: 100px;
+        height: 142px;
+
 }
 .shopping-list .book_image {
-width: 100%;
-height: 100%;
- display: block;
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 8px;
 }
 @media (max-width:375px) {
 .shopping-list .book_image-block {
@@ -235,10 +236,11 @@ width: calc(100% - 140px);
 }
 .book_buy-links_item a .amazon,
 .book_buy-links_item a .ibook {
+    transition: filter .4s linear;
     filter: grayscale(100%);
 }
 
-.book_buy-links_item a{
+.book_buy-links_item a:hover{
     filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .35));
 }
 
