@@ -117,8 +117,6 @@ const dataLocalarr = [
 const shoppingList = document.querySelector('.shopping-list')
 const KEY_BOOK = 'basket'; // key for localStorage
 
-
-
 //&    тестове збереження данних
 // localStorage.setItem(KEY_BOOK, JSON.stringify(dataLocalarr));
 
