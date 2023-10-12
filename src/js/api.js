@@ -3,6 +3,21 @@ import axios from 'axios';
 import { createMarkup } from './markup';
 async function getCategoryList() {}
 
+async function getCategoryList() {}
+
+async function getTopBooks() {}
+
+async function getBooksForCategory(searchQuery) {
+  try {
+    const response = await axios.get(
+      `https://books-backend.p.goit.global/books/category?category=${searchQuery}`
+    );
+    return response.data;
+  } catch (error) {
+    console.log(error, 'error');
+  }
+}
+
 async function getTopBooks() {}
 
 async function getBooksForCategory() {
@@ -14,6 +29,7 @@ async function getBooksForCategory() {
     console.error(error);
   }
 }
+
 async function getBook() {}
 
 export { getBook, getBooksForCategory, getCategoryList, getTopBooks };
