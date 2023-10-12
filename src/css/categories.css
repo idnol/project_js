@@ -1,0 +1,34 @@
+.all-category-link {
+  color: rgba(17, 17, 17, 0.6);
+
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.32px;
+}
+.all-category-link:hover,
+.all-category-link:focus {
+  color: #4f2ee8;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.categories {
+}
+.categories-item {
+  color: rgba(17, 17, 17, 0.6);
+
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.32px;
+}
+.categories-item:hover,
+.categories-item:focus {
+  color: #4f2ee8;
+  font-weight: 700;
+  text-transform: uppercase;
+}

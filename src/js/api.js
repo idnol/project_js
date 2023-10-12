@@ -2,6 +2,7 @@ import axios from 'axios';
 // npm i axios - for all
 
 import { createMarkup } from './markup';
+import { getCategoryMarkup } from './markup';
 
 
 async function getBooksForCategory(searchQuery) {
@@ -16,30 +17,18 @@ async function getBooksForCategory(searchQuery) {
 }
 
 
-
-
-
-
-
-const refs = {
-    ul: document.querySelector('.categories'),
-
-}
 async function getCategoryList() {
     try {
+        const div = document.querySelector('.categories-wrapper')
         const result = await axios.get('https://books-backend.p.goit.global/books/category-list');
-        console.log(result.data);
-        return result.data;
-    }
-    catch (error) {
+        const categoriesMarkup = getCategoryMarkup(result.data);
+        div.insertAdjacentHTML('beforebegin', categoriesMarkup);
+    } catch (error) {
         console.log(error, 'error');
     }
 }
-getCategoryList()
 
-
-
-
+getCategoryList();
 
 
 

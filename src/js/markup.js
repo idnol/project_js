@@ -1,5 +1,35 @@
     import { renderMarkup } from './books';
-    function createMarkup(apiResponse) {
+ 
+function getCategoryMarkup(listResult) {
+    const categoriesList = listResult.map(item => {
+        return `<li class='categories-item js-category list'>${item.list_name}</li>`;
+    }).join('');
+
+    const markup = `
+        <p class="all-category-link">All categories</p>
+        <ul class='categories'>
+            ${categoriesList}
+        </ul>`;
+    
+    return markup;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function createMarkup(apiResponse) {
       const markup = apiResponse
         .map(({ books, list_name }) => {
           const bookList = books
@@ -24,4 +54,4 @@
       renderMarkup(markup);
     }
 
-    export { createMarkup };
+    export { createMarkup, getCategoryMarkup };
