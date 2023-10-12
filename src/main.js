@@ -1,5 +1,6 @@
 import { renderAllBooksInCategory } from './js/all-category-books';
-import { getBooksForCategory } from './js/api';
+import { getBooksForCategory, getTopBooks } from './js/api';
 
 renderAllBooksInCategory();
 getBooksForCategory();
+getTopBooks();
