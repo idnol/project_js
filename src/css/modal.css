@@ -1,0 +1,50 @@
+.js-modal {
+    width: 335px;
+    height: 462px;
+    transition: transform var(--taming-duration) var(--taming-cubic);
+    transform: translate(-50%, -50%) scale(1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid rgba(17, 17, 17, 1);
+    border-radius: 18px;
+  }
+  
+  .module-close-btn{
+    content: "";
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+      border: 1px solid rgba(17, 17, 17, 1);
+    border-radius: 50%;
+  }
+  
+  .btn-module-add{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    min-width: 169px;
+    margin: 0px auto;
+    padding: 14px 28px;
+    font-family: DM Sans;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -1%;
+    line-height: 1.33;
+    background-color: #fff;
+    border-radius: 100px;
+    border-color: rgba(79, 46, 232, 1);
+  }
+  
+  .module-description{
+    font-family: DM Sans;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -4%;
+    color: rgba(17, 17, 17, 1);
+  }
