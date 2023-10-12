@@ -1,19 +1,25 @@
 import axios from 'axios';
 //npm i axios - for all
+
 import { createMarkup } from './markup';
 async function getCategoryList() {}
 
 async function getBooksForCategory(searchQuery) {
-  try {
-    const response = await axios.get(
-      `https://books-backend.p.goit.global/books/category?category=${searchQuery}`
-    );
-    return response.data;
-  } catch (error) {
-    console.log(error, 'error');
-  }
+    try {
+        const response = await axios.get(
+            `https://books-backend.p.goit.global/books/category?category=${searchQuery}`
+        );
+        return response.data;
+    } catch (error) {
+        console.log(error, 'error');
+    }
 }
 
+async function getCategoryList() {
+    const result = await axios.get('https://books-backend.p.goit.global/api-docs/books/category-list');
+    console.log(result.data);
+}
+getCategoryList().catch((error) => console.log(error))
 async function getTopBooks() {
   const API_TOP_BOOKS = 'https://books-backend.p.goit.global/books/top-books';
   try {
