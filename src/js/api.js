@@ -3,8 +3,6 @@ import axios from 'axios';
 import { createMarkup } from './markup';
 async function getCategoryList() {}
 
-async function getCategoryList() {}
-
 async function getTopBooks() {}
 
 async function getBooksForCategory(searchQuery) {
@@ -17,8 +15,6 @@ async function getBooksForCategory(searchQuery) {
     console.log(error, 'error');
   }
 }
-
-async function getTopBooks() {}
 
 async function getBooksForCategory() {
   const API_TOP_BOOKS = 'https://books-backend.p.goit.global/books/top-books';
