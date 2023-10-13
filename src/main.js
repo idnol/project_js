@@ -1,7 +1,10 @@
 import { renderAllBooksInCategory } from './js/all-category-books';
-import { getBooksForCategory } from './js/api';
+
 import { getSLider } from './js/slider.js';
+
+import { getBooksForCategory, getTopBooks } from './js/api';
 
 getSLider();
 renderAllBooksInCategory();
 getBooksForCategory();
+getTopBooks();

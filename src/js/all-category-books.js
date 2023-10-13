@@ -8,8 +8,8 @@ function renderAllBooksInCategory() {
   // вместо 'Picture Books' шаблонную строку с запросом пользователя
   return getBooksForCategory('Picture Books')
     .then(result => {
-      // вместо 'Picture Books' шаблонную строку с запросом пользователя
-      wrapLastWordTitle('Picture Books');
+      // вместо 'Hardcover Fiction' шаблонную строку с запросом пользователя
+      wrapLastWordTitle('Hardcover Fiction');
       gallery.innerHTML = renderBookCard(result);
     })
     .catch(console.error());
