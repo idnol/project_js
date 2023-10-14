@@ -1,10 +1,7 @@
 import Swiper from 'swiper';
-// import 'swiper/css';
-
-const topBooksList = document.querySelector('.books-wrapper');
 
 function renderMarkup(markup) {
-  topBooksList.insertAdjacentHTML('beforeend', markup);
+  document.querySelector('.js-book-categories').insertAdjacentHTML('beforeend', markup);
   test();
   widthWindow();
 }
