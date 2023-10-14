@@ -2,13 +2,13 @@
 
 function getCategoryMarkup(listResult) {
     const categoriesList = listResult.map(item => {
-        return `<li class='categories-item js-category list'>${item.list_name}</li>`;
+        return `<li class='categories-item js-category list' data-name='${item.list_name}'>${item.list_name}</li>`;
     }).join('');
 
     const markup = `
 
         <ul class='categories'>
-        <li class="categories-item js-category list">All categories</li>
+        <li class="categories-item js-all list">All categories</li>
             ${categoriesList}
         </ul>`;
 
@@ -45,7 +45,7 @@ function createMarkup(apiResponse) {
               <ul class="book-list list">
                   ${bookList}
               </ul>
-              <button class="category-button" type="button" data-name="${list_name}">see more</button>
+              <button class="category-button js-category-button" type="button" data-name="${list_name}">see more</button>
           </ul>`;
         })
         .join('');

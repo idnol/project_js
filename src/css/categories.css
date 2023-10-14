@@ -39,9 +39,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .categories-wrapper {
-    margin-right: 32px;
-  }
   .categories {
     gap: 32px;
     max-height: 472px;
@@ -57,12 +54,6 @@
   .categories-item:hover,
   .categories-item:focus {
     color: #4f2ee8;
-  }
-}
-
-@media screen and (min-width: 1448px) {
-  .categories-wrapper {
-    margin-right: 40px;
   }
 }
 /* як відцентрувати контент по центру  , і при чорній темі як scc написати правильно */

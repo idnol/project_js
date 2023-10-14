@@ -1,16 +1,11 @@
 import { getBooksForCategory } from './api';
 import { renderBookCard } from './book-markup';
-import { wrapLastWordTitle } from './category-books-title';
+import { refs } from './refs.js';
 
-const gallery = document.querySelector('.books-gallery');
-
-function renderAllBooksInCategory() {
-  // вместо 'Picture Books' шаблонную строку с запросом пользователя
-  return getBooksForCategory('Picture Books')
+function renderAllBooksInCategory(title) {
+  return getBooksForCategory(title)
     .then(result => {
-      // вместо 'Hardcover Fiction' шаблонную строку с запросом пользователя
-      wrapLastWordTitle('Hardcover Fiction');
-      gallery.innerHTML = renderBookCard(result);
+      refs.books.innerHTML = renderBookCard(result);
     })
     .catch(console.error());
 }

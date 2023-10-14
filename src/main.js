@@ -1,12 +1,15 @@
-import { renderAllBooksInCategory } from './js/all-category-books';
-import { refs, toggleMenu } from './js/header';
-import { getBooksForCategory, getTopBooks, getCategoryList } from './js/api';
+import { toggleMenu } from './js/header';
+import { refs } from './js/refs.js';
+import { getTopBooks, getCategoryList } from './js/api';
 import { bookSlider } from './js/slider';
+import {clickToCategory} from './js/handlers'
 
-renderAllBooksInCategory();
-getBooksForCategory();
+refs.bookCategories.addEventListener('click', clickToCategory)
+refs.sidebarCategories.addEventListener('click', clickToCategory)
+
+// toggleMenu();
 getTopBooks();
 bookSlider();
 getCategoryList();
 
-// console.log(window.outerWidth);
+

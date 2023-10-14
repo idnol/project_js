@@ -1,10 +1,5 @@
 // Mob-menu
-
-const refs = {
-  mobileMenu: document.querySelector('.js-mob-menu'),
-  openMenuBtn: document.querySelector('.js-open-menu'),
-  closeMenuBtn: document.querySelector('.js-close-menu'),
-};
+import { refs } from './refs'
 
 refs.openMenuBtn.addEventListener('click', toggleMenu);
 refs.closeMenuBtn.addEventListener('click', toggleMenu);
@@ -19,7 +14,7 @@ function toggleMenu() {
   refs.openMenuBtn.classList.toggle('visually-hidden');
 }
 
-export { toggleMenu, refs };
+export { toggleMenu };
 
 // Current-page
 
