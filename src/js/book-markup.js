@@ -4,7 +4,8 @@ function renderBookCard(data, className) {
   const classSlider = className ?? '';
   const list = data
     .map(card => {
-      return `  <li class="book-card ${classSlider}">
+
+      return `  <li class="book-card ${classSlider}" data-modal='open' data-id='${card._id}'>
                   <div class="book-action">
                     <img
                       class="book-image"
@@ -26,7 +27,7 @@ function renderBookCard(data, className) {
     .join('');
   const title = wrapLastWordTitle(data[0].list_name);
 
-  return  `<div class="books-gallery-wrapper">
+  return  `<div class="books-gallery-wrapper js-category-list">
             <h2 class='books-category-title'>${title}</h2>
             <div class='books-gallery list'>
               ${list}
