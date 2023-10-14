@@ -23,17 +23,17 @@ export { toggleMenu, refs };
 
 // Current-page
 
-let currentURL = window.location.href;
-let links = document.getElementsByTagName('a');
+// let currentURL = window.location.href;
+// let links = document.getElementsByTagName('a');
 
 // function currentPage(e) {
 //   e.preventDefault();
 
-for (let link of links) {
-  if (link.href === currentURL) {
-    link.classList.add('current-page');
-  } else {
-    link.classList.remove('current-page');
-  }
-}
+// for (let link of links) {
+//   if (link.href === currentURL) {
+//     link.classList.add('current-page');
+//   } else {
+//     link.classList.remove('current-page');
+//   }
+// }
 // }

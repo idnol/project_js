@@ -56,6 +56,9 @@ ul {
 
 .header-logo-link {
   cursor: pointer;
+  width: 110px;
+  display: flex;
+  align-items: center;
 }
 
 .logo-icon {
@@ -73,26 +76,6 @@ ul {
 .logo-icon-name:focus {
   fill: #4f2ee8;
 }
-
-/* .header-nav-link {
-  color: #111;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.28; 
-  letter-spacing: -0.56px;
-  text-transform: uppercase;
-display: block;
-} */
-
-/* .shoplist-icon {
-  width: 20px;
-  height: 20px;
-} */
-
-/* .switch-theme {
-  margin-left: 14px;
-} */
 
 .header-mob-menu {
   display: flex;
@@ -147,7 +130,6 @@ display: block;
 
 .menu-open-btn {
   padding: 0;
-  /* margin-left: 14px; */
   width: 28px;
   height: 28px;
   cursor: pointer;
@@ -172,9 +154,7 @@ display: block;
   /* position: absolute; */
   top: 18px;
   right: 20px;
-
   padding: 0;
-  /* margin-left: 14px; */
   width: 28px;
   height: 28px;
   cursor: pointer;
@@ -224,25 +204,6 @@ display: block;
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: scale(0.000001);
 }
-
-/* @media (min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-  .mob-menu {
-    background: url(../img/Group-books-2x.png),
-      radial-gradient(
-        189.32% 190.93% at 59.76% -23.42%,
-        #4f2ee8 18.03%,
-        #fff 100%
-      );
-    background-repeat: no-repeat;
-    background-position: bottom;
-  }
-} */
-
-/* .mob-menu.is-hidden {
-  top: 200%;
-} */
 
 .mob-menu.is-open {
   transform: translateY(0);
