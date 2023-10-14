@@ -1,15 +1,11 @@
 export const listenerEventsModal = () => {
-    [].forEach(li => {
-        document.querySelectorAll(".js-modal").addEventListener("click", toggleModal);
-    });
-
-    [].forEach (x => {
-        document.querySelectorAll("[data-modal='close']").addEventListener("click", toggleModal);
-    });
+    console.log('click');
+        document.querySelector("[data-modal='open']").addEventListener("click", toggleModal);
+        document.querySelector(".module-close-btn").addEventListener("click", toggleModal);
 };
 
 function toggleModal() {
-    document.querySelectorAll(".js-modal")[0].classList.toggle("hidden");
+    document.querySelector(".js-modal").classList.toggle("hidden");
     document.body.classList.toggle("no-scroll");
     document.body.classList.toggle("color-body");
 };
@@ -19,15 +15,6 @@ document.addEventListener("keydown", event => {
         toggleModal()
     }}
     );
-
-//   function renderMarkup(markup) {
-//     refs.closeModalBtn.insertAdjacentHTML("afterend", markup);
-//   }
-
-//   const modal = renderCardModal()
-
-//   renderMarkup(modal)
-
 
 //   function renderCardModal(idBook) {
 //     return idBook.map(({ list_name, author, book_image, amazon_product_url}) => {

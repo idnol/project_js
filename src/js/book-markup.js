@@ -1,7 +1,7 @@
 function renderBookCard(data) {
   return data
     .map(card => {
-      return `  <li class="book-card" data-modal='open'>
+      return `  <li class="book-card" data-modal="open">
                   <div class="book-action">
                     <img
                       class="book-image"

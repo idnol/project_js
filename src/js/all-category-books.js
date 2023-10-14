@@ -12,7 +12,6 @@ function renderAllBooksInCategory() {
       // вместо 'Hardcover Fiction' шаблонную строку с запросом пользователя
       wrapLastWordTitle('Hardcover Fiction');
       gallery.innerHTML = renderBookCard(result);
-      listenerEventsModal()
     })
     .catch(console.error());
 }

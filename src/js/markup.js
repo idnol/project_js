@@ -5,7 +5,7 @@ function createMarkup(apiResponse) {
       const bookList = books
         .map(({ list_name, book_image, title, author }) => {
           return `
-        <li class="book" data-name="${list_name}" data-modal='open'>
+        <li class="book" data-name="${list_name}" data-modal="open">
           <img class="book-img" src="${book_image}" alt="${title}" />
           <h3 class="book-name">${title}</h3>
           <p class="book-author">${author}</p>
