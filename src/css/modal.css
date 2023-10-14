@@ -7,6 +7,12 @@
   overflow: hidden;
 }
 
+.svg-amazon{
+  width: 62px;
+  height: 19px;
+  background-color: black;
+}
+
 .backdrop {
   transition: opacity(-50%, -50%) scale(1);;
   opacity: 1;
@@ -131,5 +137,20 @@
       min-width: 400px;
       max-width: 499px;
       height: 64px;
+    }
+
+    .modal-book-image{
+      max-width: 192px;
+      max-height: 281px;
+      position: absolute;
+
+      top: 40px;
+      left: 40px;
+    }
+
+    .block-info{
+      display: block;
+
+      position: absolute;
     }
   }

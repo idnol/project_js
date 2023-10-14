@@ -7,6 +7,7 @@ const refs = {
   bookCategories: document.querySelector('.js-book-categories'),
   sidebarCategories: document.querySelector('.js-categories'),
   modalClose:  document.querySelector(".module-close-btn"),
+  moduleBtnAdd: document.querySelector('.btn-module-add'),
 };
 
 export { refs }
