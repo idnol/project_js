@@ -45,7 +45,7 @@ function createMarkup(apiResponse) {
               <ul class="book-list list">
                   ${bookList}
               </ul>
-              <button class="category-button" type="button" data-name="${list_name}">see more</button>
+              <button class="category-button js-category-button" type="button" data-name="${list_name}">see more</button>
           </ul>`;
         })
         .join('');
