@@ -24,9 +24,10 @@ function renderBookCard(data, className) {
                 </li>`;
     })
     .join('');
+  const title = wrapLastWordTitle(data[0].list_name);
 
-  return `<div class="books-gallery-wrapper">
-            ${wrapLastWordTitle(data[0].list_name)}
+  return  `<div class="books-gallery-wrapper">
+            <h2 class='books-category-title'>${title}</h2>
             <div class='books-gallery list'>
               ${list}
             </div>
