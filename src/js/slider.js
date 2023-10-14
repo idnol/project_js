@@ -1,4 +1,12 @@
 import Swiper from 'swiper';
+import 'swiper/css';
 
-//npm install swiper
-//https://swiperjs.com/get-started
+
+function bookSlider() {
+  const swiper = new Swiper('.mySwiper', {
+    slidesPerView: 3,
+    spaceBetween: 30,
+  });
+}
+export { bookSlider };
+

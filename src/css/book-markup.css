@@ -56,7 +56,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 18px; /* 112.5% */
+  line-height: 1.12; /* 112.5% */
   letter-spacing: -0.64px;
   text-transform: uppercase;
 
@@ -75,7 +75,7 @@
   font-size: 12px;
   font-style: italic;
   font-weight: 400;
-  line-height: 14px; /* 116.667% */
+  line-height: 1.16; /* 116.667% */
   letter-spacing: -0.48px;
 }
 
@@ -116,7 +116,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 18px; /* 128.571% */
+  line-height: 1.28; /* 128.571% */
   letter-spacing: -0.56px;
   text-transform: uppercase;
 }
@@ -134,7 +134,9 @@
   .book-card {
     width: calc((100% - 50px) / 3);
   }
-
+  .book-card.swiper-slide {
+    width: calc((100% - 50px) / 3);
+  }
   .book-card .book-title {
     width: calc((100% - 40px));
   }

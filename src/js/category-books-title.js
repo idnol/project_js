@@ -6,7 +6,7 @@ function wrapLastWordTitle(categoryTitle) {
   const addSpanToLastWord = document.createElement('span');
   addSpanToLastWord.textContent = lastTitleWord;
   titleWords[titleWords.length - 1] = addSpanToLastWord.outerHTML;
-  booksCategoryTitle.innerHTML = titleWords.join(' ');
+  return  titleWords.join(' ');
 }
 
 export { wrapLastWordTitle };

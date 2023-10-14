@@ -3,9 +3,22 @@
   padding: 0 20px;
 }
 
+.row {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+
+section {
+  padding: 115px 0 40px;
+}
+
 @media screen and (min-width: 768px) {
   .container {
     padding: 0 32px;
+  }
+  .row {
+    gap: 98px;
   }
 }
 
@@ -14,5 +27,9 @@
     padding: 0 24px;
     width: 1448px;
     margin: auto;
+  }
+  .row {
+    gap: 40px;
+    flex-direction: row;
   }
 }
