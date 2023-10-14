@@ -28,7 +28,7 @@ async function getCategoryList() {
 async function getTopBooks() {
   try {
     const apiInstance = await axios.get(`${refs.API}/books/top-books`);
-    createMarkup(apiInstance.data);
+    await createMarkup(apiInstance.data);
   } catch (error) {
     console.error(error);
   }

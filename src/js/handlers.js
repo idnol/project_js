@@ -1,5 +1,6 @@
 import {refs} from './refs.js';
 import { renderAllBooksInCategory } from './all-category-books.js';
+import { getTopBooks } from './api.js';
 
 async function clickToCategory(e) {
   if (e.target.classList.contains('js-category-button') || e.target.classList.contains('js-category')) {
@@ -13,7 +14,11 @@ async function clickToCategory(e) {
   }
 
   if (e.target.classList.contains('js-all')) {
-    console.log(123);
+    document.querySelector('.js-category-list').remove();
+    const wrapper = document.createElement("div");
+    wrapper.classList.add('books-wrapper', 'js-book-categories');
+    refs.books.appendChild(wrapper);
+    await getTopBooks();
   }
 }
 
