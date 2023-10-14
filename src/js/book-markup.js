@@ -4,7 +4,8 @@ function renderBookCard(data, className) {
   const classSlider = className ?? '';
   const list = data
     .map(card => {
-      return `  <li class="book-card ${classSlider}">
+
+      return `  <li class="book-card ${classSlider}" data-modal='open'>
                   <div class="book-action">
                     <img
                       class="book-image"
