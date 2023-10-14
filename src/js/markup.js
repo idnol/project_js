@@ -1,5 +1,4 @@
 import { renderMarkup } from './books';
-import { getTopBooks } from './api';
 
 function getCategoryMarkup(listResult) {
   const categoriesList = listResult

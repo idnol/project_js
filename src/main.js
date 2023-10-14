@@ -10,6 +10,7 @@ refs.sidebarCategories.addEventListener('click', clickToCategory);
 
 // toggleMenu();
 // createMarkup();
+bookSlider();
 getTopBooks();
 bookSlider();
 getCategoryList();
