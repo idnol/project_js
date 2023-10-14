@@ -15,8 +15,12 @@ async function clickToCategory(e) {
 
   if (e.target.classList.contains('js-all')) {
     document.querySelector('.js-category-list').remove();
+    const title = document.createElement("h1");
+    title.classList.add('books-title');
+    title.innerHTML = 'Best Sellers <span>Books</span>';
     const wrapper = document.createElement("div");
     wrapper.classList.add('books-wrapper', 'js-book-categories');
+    refs.books.appendChild(title);
     refs.books.appendChild(wrapper);
     await getTopBooks();
   }

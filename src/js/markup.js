@@ -19,10 +19,11 @@ function getCategoryMarkup(listResult) {
 function createMarkup(apiResponse) {
       const markup = apiResponse
         .map(({ books, list_name }) => {
+          console.log(books);
           const bookList = books
-            .map(({ list_name, book_image, title, author }) => {
+            .map(({_id, list_name, book_image, title, author }) => {
               return `
-                      <li class="book book-card" data-name="${list_name}">
+                      <li class="book book-card" data-name="${list_name}" data-id='${_id}'>
                         <div class="book-action">
                           <img
                             class="book-image"
