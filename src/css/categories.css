@@ -28,16 +28,25 @@
   letter-spacing: -0.32px;
   transition: color 0.25s, font-weight 0.25s, text-transform 0.25s;
 }
+.dark-theme .categories-item {
+  color: rgba(255, 255, 255, 0.6);
+}
 
 .categories-item:first-child {
   font-weight: 700;
   text-transform: uppercase;
 }
+.dark-theme .categories-item:first-child {
+  color: #eac645;
+}
 
 .categories-item:hover,
 .categories-item:focus,
-.categories-item.active{
+.categories-item.active {
   color: #4f2ee8;
+}
+.dark-theme .categories-item:hover {
+  color: #eac645;
 }
 
 @media screen and (min-width: 768px) {
