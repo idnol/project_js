@@ -5,12 +5,17 @@
   font-weight: 700;
   line-height: 1.18;
   letter-spacing: -1.28px;
+  margin-bottom: 40px;
 }
 .books-title span {
   color: #4f2ee8;
 }
+<<<<<<< Updated upstream
 
 .category-books {
+=======
+.category-name {
+>>>>>>> Stashed changes
   color: #b4afaf;
   font-family: DM Sans;
   font-size: 14px;
@@ -19,6 +24,7 @@
   line-height: 1.28;
   letter-spacing: 0.42px;
   text-transform: uppercase;
+  margin-bottom: 18px;
 }
 .swiper-wrapper.books-gallery {
   flex-wrap: nowrap;
@@ -47,11 +53,13 @@
 .book-list {
   display: flex;
   gap: 25px;
+  margin-bottom: 8px;
 }
 .book-img {
   width: 335px;
   height: 485px;
   border-radius: 8px;
+  margin-bottom: 14px;
 }
 .book-name {
   color: #111111;
@@ -61,6 +69,7 @@
   line-height: 1.12;
   letter-spacing: -0.64px;
   text-transform: uppercase;
+  margin-bottom: 4px;
 }
 .book-author {
   color: #b4afaf;
