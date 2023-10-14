@@ -28,13 +28,15 @@
   letter-spacing: -0.32px;
   transition: color 0.25s, font-weight 0.25s, text-transform 0.25s;
 }
+
 .categories-item:first-child {
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .categories-item:hover,
-.categories-item:focus {
+.categories-item:focus,
+.categories-item.active{
   color: #4f2ee8;
 }
 
