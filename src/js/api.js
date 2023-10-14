@@ -28,18 +28,6 @@ async function getCategoryList() {
     }
 }
 
-getCategoryList();
-
-
-
-
-
-
-
-
-
-
-
 async function getTopBooks() {
   const API_TOP_BOOKS = 'https://books-backend.p.goit.global/books/top-books';
   try {
