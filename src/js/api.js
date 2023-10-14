@@ -34,6 +34,8 @@ async function getTopBooks() {
   }
 }
 
-async function getBook() {}
+async function getBook() {
+    
+}
 
 export { getBook, getBooksForCategory, getCategoryList, getTopBooks };

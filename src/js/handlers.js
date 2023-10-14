@@ -31,6 +31,24 @@ async function renderBooks(e) {
   refs.bookCategories.remove();
   await renderAllBooksInCategory(e.target.dataset.name);
 }
+ 
+async function handlerBookClick(e) {
+  const target = e.target.closest('li')
+  target.addEventListener('click', toggleModal)
+}
 
+function toggleModal() {
+  document.querySelector(".js-modal").classList.toggle("hidden");
+  document.body.classList.toggle("no-scroll");
+  document.body.classList.toggle("color-body");
+};
 
-export {clickToCategory}
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+      toggleModal()
+  }}
+  );
+
+  refs.modalClose.addEventListener("click", toggleModal)
+
+export {clickToCategory, handlerBookClick}
