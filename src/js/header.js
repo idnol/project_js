@@ -1,14 +1,5 @@
+import { refs } from './refs.js';
 // Mob-menu
-
-import { refs } from './refs';
-
-const refs = {
-  mobileMenu: document.querySelector('.js-mob-menu'),
-  openMenuBtn: document.querySelector('.js-open-menu'),
-  closeMenuBtn: document.querySelector('.js-close-menu'),
-
-  changeThemeBtn: document.querySelector('.switch-input'),
-};
 
 refs.openMenuBtn.addEventListener('click', toggleMenu);
 refs.closeMenuBtn.addEventListener('click', toggleMenu);
@@ -23,8 +14,6 @@ function toggleMenu() {
   refs.openMenuBtn.classList.toggle('visually-hidden');
 }
 
-export { toggleMenu };
-
 window.addEventListener('resize', matchMedia);
 
 function matchMedia(event) {
@@ -36,16 +25,10 @@ function matchMedia(event) {
   }
 }
 
-export { refs, toggleMenu, matchMedia };
-
 // Current-page
 
 let currentURL = window.location.href;
 let links = document.getElementsByTagName('a');
-const itemList = document.querySelector('.menu-item');
-
-// console.log(currentURL);
-// console.log(links);
 
 for (let link of links) {
   if (link.href === currentURL) {
@@ -55,4 +38,20 @@ for (let link of links) {
   }
 }
 
-// dark-theme
+// dark theme
+
+const theme = localStorage.getItem('theme') || 'light-theme';
+
+refs.checkbox.addEventListener('change', toggleTheme);
+
+function toggleTheme() {
+  if (this.checked) {
+    refs.body.classList.add('dark-theme');
+    localStorage.setItem('theme', 'dark-theme');
+  } else {
+    refs.body.classList.remove('dark-theme');
+    localStorage.setItem('theme', 'light-theme');
+  }
+}
+
+export { refs, toggleMenu, matchMedia };
