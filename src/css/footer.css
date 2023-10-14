@@ -1,0 +1,17 @@
+footer {
+  padding: 20px 0;
+}
+
+footer .row {
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #b4afaf;
+}
