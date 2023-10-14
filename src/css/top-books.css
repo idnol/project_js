@@ -45,12 +45,13 @@
   height: 100%;
   object-fit: cover;
 } */
-/*
+
 .book-list {
   display: flex;
   gap: 25px;
   margin-bottom: 8px;
 }
+/*
 .book-img {
   width: 335px;
   height: 485px;

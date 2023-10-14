@@ -16,6 +16,6 @@
   .sidebar {
     flex-direction: column;
     gap: 86px;
-    min-width: calc(28% - 40px);
+    width: calc(28% - 40px);
   }
 }
