@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { getCategoryMarkup, createMarkup } from './markup';
+import { sliderBook } from './slider';
 import { refs } from './refs.js';
 async function getBooksForCategory(searchQuery) {
   try {
@@ -27,7 +28,8 @@ async function getCategoryList() {
 async function getTopBooks() {
   try {
     const apiInstance = await axios.get(`${refs.API}/books/top-books`);
-    await createMarkup(apiInstance.data);
+    createMarkup(apiInstance.data);
+    sliderBook();
   } catch (error) {
     console.error(error);
   }

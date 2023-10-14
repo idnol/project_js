@@ -20,33 +20,34 @@ function getCategoryMarkup(listResult) {
 function createMarkup(apiResponse) {
   const markup = apiResponse
     .map(({ books, list_name }) => {
-      console.log(books);
       const bookList = books
-        .map(({ _id, list_name, book_image, title, author }) => {
-          return `
-                      <li class="book book-card" data-name="${list_name}" data-id='${_id}'>
-                        <div class="book-action">
-                          <img
-                            class="book-image"
-                            src="${book_image}"
-                            alt="${title}"
-                            loading="lazy"
-                          />
-                          <div class="book-card-overlay">
-                            <p class="overlay-text">quick view</p>
-                          </div>
-                        </div>
-                        <div class="info">
-                          <p class="book-title">${title}</p>
-                          <p class="book-author">${author}</p>
-                        </div>
-                      </li>`;
+        .map(({ _id, book_image, title, author }) => {
+          return `  <li class="book-card swiper-slide" data-id='${_id}'>
+                  <div class="book-action">
+                    <img
+                      class="book-image"
+                      src="${book_image}"
+                      alt="${title}"
+                      loading="lazy"
+                    />
+                    <div class="book-overlay">
+                      <p class="overlay-text">quick view</p>
+                    </div>
+                    ;
+                  </div>
+                  <div class="info">
+                    <p class="book-title">${title}</p>
+                    <p class="book-author">${author}</p>
+                  </div>
+                </li>`;
         })
         .join('');
       return `<ul class="category-books">
               <h2 class="category-name">${list_name}</h2>
-              <ul class="book-list list">
+              <ul class="books-gallery list swiper mySwiper">
+              <div class="swiper-wrapper">
                   ${bookList}
+                  </div>
               </ul>
               <button class="category-button js-category-button" type="button" data-name="${list_name}">see more</button>
           </ul>`;
