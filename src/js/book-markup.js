@@ -1,6 +1,8 @@
+import { wrapLastWordTitle } from './category-books-title.js';
+
 function renderBookCard(data, className) {
-  const classSlider = className ?? ''
-  return data
+  const classSlider = className ?? '';
+  const list = data
     .map(card => {
       return `  <li class="book-card ${classSlider}">
                   <div class="book-action">
@@ -22,6 +24,13 @@ function renderBookCard(data, className) {
                 </li>`;
     })
     .join('');
+
+  return `<div class="books-gallery-wrapper">
+            ${wrapLastWordTitle(data[0].list_name)}
+            <div class='books-gallery list'>
+              ${list}
+            </div>
+          </div>`;
 }
 
 export { renderBookCard };

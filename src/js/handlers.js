@@ -1,9 +1,13 @@
 import {refs} from './refs.js';
 import { renderAllBooksInCategory } from './all-category-books.js';
 
-async function clickedIntoTopBooks(e) {
-  if (e.target.classList.contains('js-category-button')) {
+async function clickToCategory(e) {
+  if (e.target.classList.contains('js-category-button') || e.target.classList.contains('js-category')) {
     await renderBooks(e);
+  }
+
+  if (e.target.classList.contains('js-all')) {
+    console.log(123);
   }
 }
 
@@ -14,4 +18,4 @@ async function renderBooks(e) {
 }
 
 
-export {clickedIntoTopBooks}
+export {clickToCategory}
