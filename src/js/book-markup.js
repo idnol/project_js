@@ -1,7 +1,8 @@
-function renderBookCard(data) {
+function renderBookCard(data, className) {
+  const classSlider = className ?? ''
   return data
     .map(card => {
-      return `  <li class="book-card">
+      return `  <li class="book-card ${classSlider}">
                   <div class="book-action">
                     <img
                       class="book-image"
