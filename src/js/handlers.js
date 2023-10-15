@@ -1,7 +1,7 @@
 import { refs } from './refs.js';
 import { renderAllBooksInCategory } from './all-category-books.js';
 import { getTopBooks, getBook } from './api.js';
-import { addToBasket } from './basket.js';
+import { addToBasket, removeItemFromStorage, setStorage } from './basket.js';
 
 async function clickToCategory(e) {
   if (
@@ -72,4 +72,13 @@ function handlerBookScroll() {
   }
 }
 
-export {clickToCategory, handlerBookClick, handlerBookScroll, closeModal, toggleModal}
+async function onModalBtnAddClick(e) {
+  const book = await getBook(e.target.dataset.id);
+  if (!refs.modalBtnAdd.classList.contains('remove')) {
+    await setStorage(book.data);
+  } else {
+    await removeItemFromStorage(book.data);
+  }
+}
+
+export {clickToCategory, handlerBookClick, handlerBookScroll, closeModal, toggleModal, onModalBtnAddClick}

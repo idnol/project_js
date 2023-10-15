@@ -1,19 +1,15 @@
 import { getBook } from './api.js';
 import { refs } from './refs.js';
 import { renderCardModal } from './markup.js';
+import {onModalBtnAddClick} from './handlers.js'
 
 async function addToBasket(e, target) {
-    const book = await getBook(target.dataset.id)
-    refs.modalInfo.innerHTML = await renderCardModal(book.data);
-    await getBooksFromBasket(book.data);
-    refs.modalBtnAdd.addEventListener('click', async function(e) {
-      console.log(this.classList.contains('remove'));
-      if (!this.classList.contains('remove')) {
-        await setStorage(book.data);
-      } else {
-        await removeItemFromStorage(book.data);
-      }
-    })
+  const book = await getBook(target.dataset.id);
+  refs.modalBtnAdd.dataset.id = book.data._id;
+  refs.modalInfo.innerHTML = await renderCardModal(book.data);
+  await getBooksFromBasket(book.data);
+  refs.modalBtnAdd.removeEventListener('click', onModalBtnAddClick);
+  refs.modalBtnAdd.addEventListener('click', onModalBtnAddClick);
 }
 
 async function setStorage(item) {
@@ -54,5 +50,4 @@ function setupAdd() {
   refs.modalBtnAdd.classList.remove('remove');
 }
 
-
-export {addToBasket}
+export {addToBasket, onModalBtnAddClick, setStorage, removeItemFromStorage}

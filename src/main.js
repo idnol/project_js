@@ -12,6 +12,7 @@ document.addEventListener('keydown', closeModal);
 refs.modalClose.addEventListener('click', toggleModal);
 window.addEventListener('scroll', handlerBookScroll);
 
+
 getTopBooks().then(r => {});
 sliderBook();
 getCategoryList().then(r => {});
