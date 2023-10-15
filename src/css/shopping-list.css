@@ -264,7 +264,7 @@ align-items: flex-start;
 
 
 .pagination{
-  display: flex;
+  display: none;
   justify-content: center;
   margin-top: 40px;
   gap: 8px;
