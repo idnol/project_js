@@ -11,7 +11,9 @@ const refs = {
   modalClose: document.querySelector('.module-close-btn'),
   modalBtnAdd: document.querySelector('.btn-module-add'),
   modal: document.querySelector('.block-module-info'),
-  modalInfo: document.querySelector('.js-modal-info')
+  modalInfo: document.querySelector('.js-modal-info'),
+  moduleBtnAdd: document.querySelector('.btn-module-add'),
+  scroll: document.getElementById('scroll'),
 };
 
 export { refs };

@@ -35,6 +35,7 @@ async function renderBooks(e) {
 
 // MODAL WINDOW
 
+
 async function handlerBookClick(e) {
 if (refs.modal) {
    refs.modal.innerHTML = '';
@@ -64,5 +65,12 @@ function addToShoppingList(basket, value) {
   localStorage.setItem(basket, bookState);
 }
 
+ function handlerBookScroll() {
+  if (window.pageYOffset > 100) {
+    refs.scroll.classList.add('active');
+  }else {
+    refs.scroll.classList.remove('active');
+  }
+}
 
 export {clickToCategory, handlerBookClick, closeModal, toggleModal}
