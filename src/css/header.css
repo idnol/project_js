@@ -72,11 +72,6 @@ ul {
   height: 13px;
 }
 
-.logo-icon-name:hover,
-.logo-icon-name:focus {
-  fill: #4f2ee8;
-}
-
 .header-mob-menu {
   display: flex;
   align-items: center;
@@ -187,7 +182,8 @@ ul {
   width: 100%;
   display: table;
 
-  padding: 247px 128px;
+  padding-top: 247px;
+
   background: url(../img/Group-books.png),
     radial-gradient(
       189.32% 190.93% at 59.76% -23.42%,
@@ -213,7 +209,7 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  width: 118px;
+  width: 155px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -222,41 +218,74 @@ ul {
   display: flex;
   gap: 4px;
   align-items: center;
+  min-width: 118px;
 }
 
 .mob-nav-link {
   position: relative;
   color: #fff;
-  /* font-family: DM Sans; */
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.28; /* 128.571% */
   letter-spacing: -0.56px;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
 
 .shoplist-icon {
   width: 20px;
   height: 20px;
-  fill: #ffffff;
+  fill: #fff;
+  margin-left: 4px;
 }
 
-/* .current-page::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 25%;
-  transform: translate(-50%, -25%);
-  z-index: -2;
-  top: 0;
-  bottom: 0;
-  display: block;
-  width: 72px;
-  height: 34px;
-  border-radius: 36px;
+li a.current-page {
+  font-weight: 700;
   background-color: #eac645;
-} */
+
+  border-radius: 36px;
+  display: flex;
+  padding: 8px 16px;
+  color: #111111;
+}
+
+a.current-page .shoplist-icon {
+  fill: #111111;
+}
+
+.login {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 118px;
+  height: 48px;
+  border-radius: 18px;
+  border: 1.5px solid #111;
+
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-login {
+  width: 20px;
+  height: 20px;
+  stroke: #eac645;
+  margin-left: 4px;
+}
+
+.photo-user {
+  position: absolute;
+  top: 84px;
+  left: 20px;
+  width: 37px;
+  height: 37px;
+  background-color: #fff;
+  border-radius: 50%;
+}
 
 /** ------------------ TABLET 768 ------------------ **/
 @media screen and (min-width: 768px) {
@@ -272,20 +301,14 @@ ul {
     display: flex;
     align-items: center;
     margin-left: 40px;
-    gap: 40px;
   }
 
   .menu-item {
     position: relative;
     display: flex;
     align-items: center;
-    /* margin-left: 40px; */
+    margin-left: 16px;
   }
-
-  /* .header-nav {
-    display: flex;
-    align-items: center;
-  } */
 
   .header-nav-link {
     position: relative;
@@ -296,12 +319,8 @@ ul {
     line-height: 1.28;
     letter-spacing: -0.56px;
     text-transform: uppercase;
-    display: block;
-  }
-
-  .header-nav-link:hover,
-  .header-nav-link:focus {
-    font-weight: 700;
+    display: flex;
+    align-items: center;
   }
 
   .shoplist-icon {
@@ -311,45 +330,17 @@ ul {
     margin-left: 8px;
   }
 
-  .header-nav-link.current-page {
+  li a.current-page {
     font-weight: 700;
+    background-color: #eac645;
+    border-radius: 36px;
+    display: flex;
+    padding: 8px 16px;
   }
 
-  /* .current-page::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 25%;
-    transform: translate(-50%, -25%);
-    z-index: -2;
-    top: 0;
-    bottom: 0;
-    display: block;
-    width: 72px;
-    height: 34px;
-    border-radius: 36px;
-    background-color: #eac645;
-  } */
-
-  /* .current-page-shop::before {
-    content: '';
-    position: absolute;
-    left: 30%;
-    top: 25%;
-    transform: translate(-30%, -25%);
-    z-index: -2;
-    top: 0;
-    bottom: 0;
-    display: block;
-    width: 156px;
-    height: 34px;
-    border-radius: 36px;
-    background-color: #eac645;
+  li:nth-child(2) a.current-page {
+    margin-left: 8px;
   }
-
-  .header-nav-link.current-page-shop {
-    font-weight: 700;
-  } */
 
   .switch {
     margin-right: 24px;
@@ -358,7 +349,6 @@ ul {
   .btn-sign-up {
     display: block;
     padding: 0;
-    /* margin-left: 14px; */
     width: 184px;
     height: 45px;
     cursor: pointer;
@@ -381,36 +371,36 @@ ul {
   .header-nav-link {
     position: relative;
   }
+}
 
-  /* .current-page::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 25%;
-    transform: translate(-50%, -25%);
-    z-index: -2;
-    top: 0;
-    bottom: 0;
-    display: block;
-    width: 72px;
-    height: 34px;
-    border-radius: 36px;
-    background-color: #eac645;
-  } */
+/* dark theme */
 
-  /* .current-page-shop::before {
-    content: '';
-    position: absolute;
-    left: 30%;
-    top: 25%;
-    transform: translate(-30%, -25%);
-    z-index: -2;
-    top: 0;
-    bottom: 0;
-    display: block;
-    width: 156px;
-    height: 34px;
-    border-radius: 36px;
-    background-color: #eac645;
-  } */
+.dark-theme {
+  background-color: #202024;
+}
+
+.dark-theme .page-header {
+  background: #111;
+  color: #fff;
+}
+
+.dark-theme .logo-icon-name {
+  fill: #fff;
+}
+
+.dark-theme .icon-burger,
+.dark-theme .icon-munu-close {
+  stroke: #fff;
+}
+
+.dark-theme .header-nav-link {
+  color: #fff;
+}
+
+.dark-theme .header-nav-link.current-page {
+  color: #111;
+}
+
+.dark-theme .shoplist-icon {
+  fill: #fff;
 }

@@ -1,4 +1,6 @@
-import { createBookFromSLocalStorageMarkup } from "./js/shoppingListBookMarkup.js";
+import { createBookFromSLocalStorageMarkup } from './js/shoppingListBookMarkup.js';
+import { refs, toggleMenu, matchMedia } from './js/header';
+
 const dataLocalarr = [
   {
 "_id": "642fd89ac8cf5ee957f12361",
@@ -480,6 +482,12 @@ function updatePagination(totalPages, currentPage) {
     paginationMarkup += `<button class="page-btn ${isActive}" data-page="${i}">${i}</button>`;
   }
 
+
+//&    функція що отримує книги з локального сховища і створює розмітку
+function getBooksFromLocalStorage(key) {
+  const localStorageBooks = JSON.parse(localStorage.getItem(key)) ?? [];
+  return createBookFromSLocalStorageMarkup(localStorageBooks);
+
   pagination.innerHTML = paginationMarkup;
 
   const pageButtons = pagination.querySelectorAll('.page-btn');
@@ -492,6 +500,7 @@ function updatePagination(totalPages, currentPage) {
     updatePagination(totalPages, currentPage);
   });
 });
+
 }
 updatePagination(totalPages,currentPage);
 
@@ -499,6 +508,13 @@ updatePagination(totalPages,currentPage);
 function deleteBookFromLocalStorage(bookId) {
   const localStorageBooks = JSON.parse(localStorage.getItem(KEY_BOOK)) || [];
   const updatedBooks = localStorageBooks.filter(book => book._id !== bookId);
+
+  localStorage.setItem(KEY_BOOK, JSON.stringify(updatedBooks));
+  shoppingList.innerHTML = getBooksFromLocalStorage(KEY_BOOK);
+  if (updatedBooks.length === 0) {
+    shoppingList.innerHTML = createBookFromSLocalStorageMarkup(updatedBooks);
+  }
+
   totalPages = Math.ceil(updatedBooks.length / booksPerPage);
   console.log(totalPages)
 
@@ -514,11 +530,13 @@ function deleteBookFromLocalStorage(bookId) {
   shoppingList.innerHTML = getBooksFromLocalStorage(KEY_BOOK, currentPage, booksPerPage);
 
 
+
 }
 
 
 shoppingList.addEventListener('click', function (event) {
   if (event.target.classList.contains('book_delete-btn')) {
+
       const bookId = event.target.dataset.id;
       deleteBookFromLocalStorage(bookId);
   } else if (event.target.closest('.book_delete-btn')) {
