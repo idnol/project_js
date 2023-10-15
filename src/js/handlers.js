@@ -45,7 +45,9 @@ async function handlerBookClick(e) {
 
     target.addEventListener('click', toggleModal)
     const dynamicBookId = await getBook(target.dataset.id)
-    const title = dynamicBookId.data.title
+
+    const title = dynamicBookId.data.title;
+
 
     console.log([dynamicBookId]);
     const readyRender = await renderCardModal([dynamicBookId]);
@@ -74,6 +76,7 @@ function toggleModal() {
   document.body.classList.toggle("no-scroll");
   document.body.classList.toggle("color-body");
 };
+
 refs.modalClose.addEventListener("click", toggleModal)
 
 function renderCardModal(idBook) {

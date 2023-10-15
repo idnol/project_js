@@ -2,9 +2,9 @@ import { toggleMenu, matchMedia } from './js/header';
 import { refs } from './js/refs.js';
 import { getTopBooks, getCategoryList } from './js/api';
 
-import { bookSlider } from './js/slider';
-import { clickToCategory } from './js/handlers';
-import { listenerEventsModal } from './js/modal';
+import { sliderBook } from './js/slider';
+import { clickToCategory, handlerBookClick } from './js/handlers';
+
 
 import { renderAllBooksInCategory } from './js/all-category-books';
 import { getBooksForCategory } from './js/api';
@@ -14,4 +14,6 @@ refs.sidebarCategories.addEventListener('click', clickToCategory);
 
 getTopBooks();
 getCategoryList();
-listenerEventsModal();
+refs.books.addEventListener('click', handlerBookClick)
+
+// toggleMenu();
