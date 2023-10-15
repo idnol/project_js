@@ -47,6 +47,7 @@ async function handlerBookClick(e) {
     const dynamicBookId = await getBook(target.dataset.id)
     const title = dynamicBookId.data.title
 
+    console.log([dynamicBookId]);
     const readyRender = await renderCardModal([dynamicBookId]);
     refs.moduleBtnAdd.insertAdjacentHTML('afterend', readyRender);
    };
