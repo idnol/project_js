@@ -27,14 +27,10 @@ async function clickToCategory(e) {
   }
 }
 
-
 async function renderBooks(e) {
   refs.bookCategories.remove();
   await renderAllBooksInCategory(e.target.dataset.name);
 }
-
-// MODAL WINDOW
-
 
 async function handlerBookClick(e) {
 if (refs.modal) {
@@ -60,11 +56,6 @@ function toggleModal() {
   document.body.classList.toggle("color-body");
 }
 
-function addToShoppingList(basket, value) {
-  const bookState = JSON.stringify(value);
-  localStorage.setItem(basket, bookState);
-}
-
  function handlerBookScroll() {
   if (window.pageYOffset > 100) {
     refs.scroll.classList.add('active');
@@ -73,4 +64,4 @@ function addToShoppingList(basket, value) {
   }
 }
 
-export {clickToCategory, handlerBookClick, closeModal, toggleModal}
+export {clickToCategory, handlerBookClick, handlerBookScroll, closeModal, toggleModal}
