@@ -35,6 +35,13 @@ async function getTopBooks() {
   }
 }
 
-async function getBook() {}
+async function getBook(bookId) {
+    try {
+        const GET_BOOK_ID = `https://books-backend.p.goit.global/books/${bookId}`;
+    return await axios.get(GET_BOOK_ID);
+    } catch (error) {
+        console.log(error);
+    };
+}
 
 export { getBook, getBooksForCategory, getCategoryList, getTopBooks };
