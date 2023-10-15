@@ -97,10 +97,13 @@ function renderCardModal(idBook) {
     localStorage.setItem(basket, bookState);
   };
 
-function handlerBookScroll(e) {
-  e.preventDefault();
-
-refs.scroll.style.display = 'block';
+ function handlerBookScroll() {
+  if (window.pageYOffset > 100) {
+    refs.scroll.classList.add('active');
+  }else {
+    refs.scroll.classList.remove('active');
+  }
 }
+
 
 export {clickToCategory, handlerBookClick, handlerBookScroll}

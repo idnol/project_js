@@ -15,5 +15,7 @@ refs.sidebarCategories.addEventListener('click', clickToCategory);
 getTopBooks();
 getCategoryList();
 // refs.books.addEventListener('click', handlerBookClick)
+
  document.addEventListener('scroll', handlerBookScroll);
+
 // toggleMenu();
