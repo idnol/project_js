@@ -45,7 +45,9 @@
 .categories-item.active {
   color: #4f2ee8;
 }
-.dark-theme .categories-item:hover {
+.dark-theme .categories-item:hover,
+.dark-theme .categories-item:focus,
+.dark-theme .categories-item.active {
   color: #eac645;
 }
 

@@ -73,4 +73,3 @@ function handlerBookScroll() {
 }
 
 export {clickToCategory, handlerBookClick, handlerBookScroll, closeModal, toggleModal}
-
