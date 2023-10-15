@@ -45,10 +45,9 @@ async function handlerBookClick(e) {
 
     target.addEventListener('click', toggleModal)
     const dynamicBookId = await getBook(target.dataset.id)
-
-    console.log(dynamicBookId);
+    console.log([dynamicBookId]);
     const readyRender = await renderCardModal([dynamicBookId]);
-    target.insertAdjacentHTML('afterend', readyRender);
+    refs.moduleBtnAdd.insertAdjacentHTML('afterend', readyRender);
 
     refs.moduleBtnAdd.addEventListener('click', () => {
       addToShoppingList('basket', dynamicBookId);
@@ -104,6 +103,5 @@ function renderCardModal(idBook) {
     refs.scroll.classList.remove('active');
   }
 }
-
 
 export {clickToCategory, handlerBookClick, handlerBookScroll}
