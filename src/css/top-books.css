@@ -23,12 +23,6 @@
   margin-bottom: 18px;
 }
 
-/* .book-list {
-  display: flex;
-  gap: 25px;
-  margin-bottom: 8px;
-} */
-
 .category-button {
   display: block;
   color: #111111;
@@ -65,5 +59,22 @@
 @media screen and (min-width: 1440px) {
   .category-button {
     margin-top: 32px;
+  }
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

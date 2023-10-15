@@ -7,7 +7,6 @@ import { listenerEventsModal } from './js/modal';
 refs.bookCategories.addEventListener('click', clickToCategory);
 refs.sidebarCategories.addEventListener('click', clickToCategory);
 
-
 getTopBooks();
 getCategoryList();
 listenerEventsModal();
