@@ -45,10 +45,6 @@ async function handlerBookClick(e) {
 
     target.addEventListener('click', toggleModal)
     const dynamicBookId = await getBook(target.dataset.id)
-
-    const title = dynamicBookId.data.title;
-
-
     console.log([dynamicBookId]);
     const readyRender = await renderCardModal([dynamicBookId]);
     refs.moduleBtnAdd.insertAdjacentHTML('afterend', readyRender);
@@ -100,5 +96,12 @@ function renderCardModal(idBook) {
     localStorage.setItem(basket, bookState);
   };
 
+ function handlerBookScroll() {
+  if (window.pageYOffset > 100) {
+    refs.scroll.classList.add('active');
+  }else {
+    refs.scroll.classList.remove('active');
+  }
+}
 
-export {clickToCategory, handlerBookClick}
+export {clickToCategory, handlerBookClick, handlerBookScroll}

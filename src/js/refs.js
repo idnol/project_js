@@ -10,6 +10,7 @@ const refs = {
   body: document.querySelector('body'),
   modalClose: document.querySelector('.module-close-btn'),
   moduleBtnAdd: document.querySelector('.btn-module-add'),
+  scroll: document.getElementById('scroll'),
 };
 
 export { refs };

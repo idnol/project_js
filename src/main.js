@@ -3,6 +3,7 @@ import { refs } from './js/refs.js';
 import { getTopBooks, getCategoryList } from './js/api';
 
 import { sliderBook } from './js/slider';
+import { clickToCategory, handlerBookClick, handlerBookScroll } from './js/handlers';
 import { clickToCategory, handlerBookClick } from './js/handlers';
 
 
@@ -14,6 +15,12 @@ refs.sidebarCategories.addEventListener('click', clickToCategory);
 
 getTopBooks();
 getCategoryList();
+
 refs.books.addEventListener('click', handlerBookClick)
+
+ window.addEventListener('scroll', handlerBookScroll);
+
+refs.books.addEventListener('click', handlerBookClick)
+
 
 // toggleMenu();
