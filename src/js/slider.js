@@ -1,12 +1,20 @@
-import Swiper from 'swiper';
-import 'swiper/css';
+import { Swiper } from 'swiper/core';
 
-
-function bookSlider() {
+function sliderBook() {
   const swiper = new Swiper('.mySwiper', {
-    slidesPerView: 3,
-    spaceBetween: 30,
+    slidesPerView: 1,
+    spaceBetween: 25,
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 25,
+      },
+      1440: {
+        slidesPerView: 5,
+        spaceBetween: 24,
+      },
+    },
   });
 }
-export { bookSlider };
 
+export { sliderBook };

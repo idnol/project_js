@@ -1,4 +1,6 @@
 import { createBookFromSLocalStorageMarkup } from './js/shoppingListBookMarkup.js';
+import { refs, toggleMenu, matchMedia } from './js/header';
+
 const dataLocalarr = [
   {
     _id: '642fd89ac8cf5ee957f12361',
@@ -530,6 +532,15 @@ updatePagination(totalPages, currentPage);
 
 
 
+//&    функція що отримує книги з локального сховища і створює розмітку
+function getBooksFromLocalStorage(key) {
+  const localStorageBooks = JSON.parse(localStorage.getItem(key)) ?? [];
+  return createBookFromSLocalStorageMarkup(localStorageBooks);
+
+  pagination.innerHTML = paginationMarkup;
+
+
+
 firstSpan.insertAdjacentHTML('afterend', paginationMarkup);
 
 
@@ -552,6 +563,10 @@ pageButtons.forEach(button => {
     updateStaticButtons();
   });
 });
+
+}
+updatePagination(totalPages,currentPage);
+
 
 toStartButton.addEventListener('click', () => {
   if (currentPage > 1) {
@@ -637,6 +652,15 @@ function deleteBookFromLocalStorage(bookId) {
   const newTotalPages = Math.ceil(updatedBooks.length / booksPerPage);
   console.log(newTotalPages)
 
+  localStorage.setItem(KEY_BOOK, JSON.stringify(updatedBooks));
+  shoppingList.innerHTML = getBooksFromLocalStorage(KEY_BOOK);
+  if (updatedBooks.length === 0) {
+    shoppingList.innerHTML = createBookFromSLocalStorageMarkup(updatedBooks);
+  }
+
+  totalPages = Math.ceil(updatedBooks.length / booksPerPage);
+  console.log(totalPages)
+
   if (newTotalPages < totalPages) {
     if (currentPage > 1) {
       currentPage--;
@@ -673,6 +697,7 @@ shoppingList.innerHTML = getBooksFromLocalStorage(
 );
 
 updateStaticButtons();
+
 
 }
 

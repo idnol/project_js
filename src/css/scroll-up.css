@@ -1,0 +1,28 @@
+#scroll {
+    padding: 0;
+    background-color: none;
+    position:fixed;
+    right:10px;
+    bottom:80px;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(79, 46, 232, 1);
+    width:54px;
+    height:54px;
+    text-decoration: none;
+    border-radius:50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+#scroll.active {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
