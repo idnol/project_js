@@ -1,28 +1,23 @@
 import { getBook } from './api.js';
 import { refs } from './refs.js';
 import { renderCardModal } from './markup.js';
+import {onModalBtnAddClick} from './handlers.js'
 
 async function addToBasket(e, target) {
-    const book = await getBook(target.dataset.id)
-    refs.modalInfo.innerHTML = await renderCardModal(book.data);
-    refs.modalBtnAdd.addEventListener('click', async function(e) {
-      console.log(this.classList.contains('remove'));
-      if (!this.classList.contains('remove')) {
-        await setStorage(book.data);
-      } else {
-        await removeItemFromStorage(book.data);
-      }
-    })
+  const book = await getBook(target.dataset.id);
+  refs.modalBtnAdd.dataset.id = book.data._id;
+  refs.modalInfo.innerHTML = await renderCardModal(book.data);
+  await getBooksFromBasket(book.data);
+  refs.modalBtnAdd.removeEventListener('click', onModalBtnAddClick);
+  refs.modalBtnAdd.addEventListener('click', onModalBtnAddClick);
 }
-
 
 async function setStorage(item) {
   const book = await item;
   const basket = JSON.parse(localStorage.getItem('basket')) || [];
   if (!basket.some(item => item._id === book._id)) {
     basket.push(book);
-    refs.modalBtnAdd.textContent = 'REMOVE BOOK';
-    refs.modalBtnAdd.classList.add('remove');
+    setupRemove();
   }
   localStorage.setItem('basket', JSON.stringify(basket));
 }
@@ -30,13 +25,29 @@ async function setStorage(item) {
 async function removeItemFromStorage(item) {
   const book = await item;
   const basket = JSON.parse(localStorage.getItem('basket'));
-  const arr = basket.map(item => {
-    if (item._id !== book.id) {
-      return item;
-    }
-  })
+  const arr = basket.filter(item => item._id !== book._id);
   localStorage.setItem('basket', JSON.stringify(arr));
+  setupAdd();
 }
 
+async function getBooksFromBasket(item) {
+  const book = await item;
+  const basket = JSON.parse(localStorage.getItem('basket')) || [];
+  if (basket.some(item => item._id === book._id)) {
+    setupRemove();
+  } else {
+    setupAdd();
+  }
+}
 
-export {addToBasket}
+function setupRemove() {
+  refs.modalBtnAdd.textContent = 'remove from the shopping list';
+  refs.modalBtnAdd.classList.add('remove');
+}
+
+function setupAdd() {
+  refs.modalBtnAdd.textContent = 'Add to shopping list';
+  refs.modalBtnAdd.classList.remove('remove');
+}
+
+export {addToBasket, onModalBtnAddClick, setStorage, removeItemFromStorage}
