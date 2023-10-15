@@ -2,10 +2,13 @@ import { toggleMenu, matchMedia } from './js/header';
 import { refs } from './js/refs.js';
 import { getTopBooks, getCategoryList } from './js/api';
 
-import { sliderBook } from './js/slider';
-import { clickToCategory, handlerBookClick, handlerBookScroll } from './js/handlers';
-import { clickToCategory, handlerBookClick } from './js/handlers';
-
+import { sliderBook, supportListSlider } from './js/slider';
+import {
+  clickToCategory,
+  handlerBookClick,
+  handlerBookScroll,
+} from './js/handlers';
+// import { clickToCategory, handlerBookClick } from './js/handlers';
 
 import { renderAllBooksInCategory } from './js/all-category-books';
 import { getBooksForCategory } from './js/api';
@@ -15,12 +18,12 @@ refs.sidebarCategories.addEventListener('click', clickToCategory);
 
 getTopBooks();
 getCategoryList();
+supportListSlider();
 
-refs.books.addEventListener('click', handlerBookClick)
+refs.books.addEventListener('click', handlerBookClick);
 
- window.addEventListener('scroll', handlerBookScroll);
+window.addEventListener('scroll', handlerBookScroll);
 
-refs.books.addEventListener('click', handlerBookClick)
-
+refs.books.addEventListener('click', handlerBookClick);
 
 // toggleMenu();
