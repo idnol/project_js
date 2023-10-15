@@ -13,9 +13,30 @@ section {
   padding: 115px 0 40px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 375px;
+    margin: auto;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container {
     padding: 0 32px;
+    width: 768px;
   }
   .row {
     gap: 98px;
@@ -25,8 +46,7 @@ section {
 @media screen and (min-width: 1448px) {
   .container {
     padding: 0 24px;
-    width: 1448px;
-    margin: auto;
+    width: 1440px;
   }
   .row {
     gap: 40px;

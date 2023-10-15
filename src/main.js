@@ -16,4 +16,4 @@ getTopBooks().then(r => {});
 sliderBook();
 getCategoryList().then(r => {});
 supportListSlider();
-toggleMenu();
+// toggleMenu();
