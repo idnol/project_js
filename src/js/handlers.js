@@ -50,13 +50,22 @@ async function handlerBookClick(e) {
     console.log([dynamicBookId]);
     const readyRender = await renderCardModal([dynamicBookId]);
     refs.moduleBtnAdd.insertAdjacentHTML('afterend', readyRender);
+
+    refs.moduleBtnAdd.addEventListener('click', () => {
+      addToShoppingList(title, dynamicBookId);
+    });
    };
 
 document.addEventListener("keydown", event => {
-  if (event.key === "Escape") {
+  try{
+    if (event.key === "Escape") {
       toggleModal()
   }
   window.removeEventListener('keydown');
+}catch{
+  console.error();
+}
+
 });
 
 
@@ -80,6 +89,12 @@ function renderCardModal(idBook) {
         </ul>
         </div>`
     }).join('');
+  };
+
+  function addToShoppingList(key, value) {
+    const bookState = JSON.stringify(value);
+
+    localStorage.setItem(key, bookState);
   };
 
 
