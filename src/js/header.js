@@ -59,8 +59,6 @@ function toggleTheme() {
     localStorage.setItem('theme', 'light-theme');
     // refs.checkbox.checked = false;
   }
-  // const currentTheme = localStorage.getItem('theme');
-  // console.log(currentTheme);
 }
 
 export { refs, toggleMenu, matchMedia };

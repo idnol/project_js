@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body class="">
+  <body onload="toggleT()">
     <load ="partials/header.html" />
 
     <main>
@@ -33,11 +33,20 @@
     <load ="partials/mob-menu.html" />
     <load ="partials/modal.html" />
     <footer>
-        <a id="scroll"  href="#">
-            <img class="png-scroll" src="./img/Vector-scroll.svg">
-        </a>
+      <a id="scroll" href="#">
+        <img class="png-scroll" src="./img/Vector-scroll.svg" />
+      </a>
     </footer>
     <script type="module" src="/main.js"></script>
+    <script>
+      function toggleT() {
+        console.log(123);
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark-theme') {
+          document.body.classList.add('dark-theme');
+        }
+      }
+    </script>
   </body>
 </html>
 
