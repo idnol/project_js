@@ -21,6 +21,9 @@ let paginationMarkup = '';
   if (currentPage > 1) {
   toStartButton.classList.remove('disabled');
 }
+if (totalPages > 0) {
+  pagination.style.display = 'flex';
+}
 function getBooksFromLocalStorage(key, currentPage, booksPerPage) {
   const localStorageBooks = JSON.parse(localStorage.getItem(key)) || [];
   const startIndex = (currentPage - 1) * booksPerPage;
@@ -28,11 +31,7 @@ function getBooksFromLocalStorage(key, currentPage, booksPerPage) {
   const booksToDisplay = localStorageBooks.slice(startIndex, endIndex);
   return createBookFromSLocalStorageMarkup(booksToDisplay);
 }
-shoppingList.innerHTML = getBooksFromLocalStorage(
-  KEY_BOOK,
-  currentPage,
-  booksPerPage
-);
+
 
 function updateStaticButtons() {
   if (currentPage === 1) {
@@ -56,12 +55,15 @@ function updatePagination(totalPages, currentPage) {
     const isActive = i === currentPage ? 'active' : '';
     paginationMarkup += `<button class="page-btn ${isActive}" data-page="${i}">${i}</button>`;
   }
-
 }
+shoppingList.innerHTML = getBooksFromLocalStorage(
+  KEY_BOOK,
+  currentPage,
+  booksPerPage
+);
 updatePagination(totalPages,currentPage)
 firstSpan.insertAdjacentHTML('afterend', paginationMarkup);
 let pageButtons = pagination.querySelectorAll('.page-btn');
-console.log(pageButtons)
 pageButtons.forEach(button => {
   button.addEventListener("click", event => {
     const page = parseInt(event.target.dataset.page);
@@ -75,14 +77,13 @@ pageButtons.forEach(button => {
       page,
       booksPerPage
     );
-    console.log(totalPages, currentPage);
     updatePagination(totalPages, currentPage);
     updateStaticButtons();
   });
 });
 
 
-updatePagination(totalPages, currentPage);
+
 
 toStartButton.addEventListener('click', () => {
   if (currentPage > 1) {
@@ -153,47 +154,41 @@ toEndButton.addEventListener('click', () => {
     currentPage = currentPage;
   }
 });
+
 function deleteBookFromLocalStorage(bookId) {
   const localStorageBooks = JSON.parse(localStorage.getItem(KEY_BOOK)) || [];
   const updatedBooks = localStorageBooks.filter(book => book._id !== bookId);
   const newTotalPages = Math.ceil(updatedBooks.length / booksPerPage);
-  console.log(newTotalPages)
-  localStorage.setItem(KEY_BOOK, JSON.stringify(updatedBooks));
-  shoppingList.innerHTML = getBooksFromLocalStorage(KEY_BOOK);
-  if (updatedBooks.length === 0) {
-    shoppingList.innerHTML = createBookFromSLocalStorageMarkup(updatedBooks);
-  }
-  totalPages = Math.ceil(updatedBooks.length / booksPerPage);
-  console.log(totalPages)
+
   if (newTotalPages < totalPages) {
     if (currentPage > 1) {
       currentPage--;
       const prevPageButton = pageButtons[currentPage - 1];
       pageButtons.forEach(btn => btn.classList.remove('active'));
       prevPageButton.classList.add('active');
+      updatePagination(totalPages, currentPage);
     } else {
         totalPages = newTotalPages;
         if (totalPages === 0) {
           pagination.style.display = 'none';
         }
+      }
+      const buttonIndex = totalPages - 1;
+      if (buttonIndex >= 0 && buttonIndex < pageButtons.length) {
+        pageButtons[buttonIndex].remove();
+      }
+      else {
+        totalPages = newTotalPages;
+      }
     }
-    console.log(totalPages)
-    const buttonIndex = totalPages - 1;
-    if (buttonIndex >= 0 && buttonIndex < pageButtons.length) {
-      pageButtons[buttonIndex].remove();
-    }
-    else {
-      totalPages = newTotalPages;
-    }
-  }
-  totalPages = newTotalPages;
-localStorage.setItem(KEY_BOOK, JSON.stringify(updatedBooks));
-updatePagination(totalPages, currentPage);
-shoppingList.innerHTML = getBooksFromLocalStorage(
-  KEY_BOOK,
-  currentPage,
-  booksPerPage
-);
+  totalPages = newTotalPages; 
+  localStorage.setItem(KEY_BOOK, JSON.stringify(updatedBooks));
+  updatePagination(totalPages, currentPage);
+  shoppingList.innerHTML = getBooksFromLocalStorage(
+    KEY_BOOK,
+    currentPage,
+    booksPerPage
+  );
 updateStaticButtons();
 }
 shoppingList.addEventListener('click', function (event) {
