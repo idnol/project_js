@@ -31,6 +31,8 @@ async function renderBooks(e) {
   refs.bookCategories.remove();
   await renderAllBooksInCategory(e.target.dataset.name);
 }
+
+// MODAL WINDOW
  
 async function handlerBookClick(e) {
   const blockRender = document.querySelector('.block-module-info');
@@ -41,14 +43,13 @@ async function handlerBookClick(e) {
 
   const target = await e.target.closest('li')
 
-   if (target) {
     target.addEventListener('click', toggleModal)
     const dynamicBookId = await getBook(target.dataset.id)
-    console.log([dynamicBookId]);
+    const title = dynamicBookId.data.title
+
     const readyRender = await renderCardModal([dynamicBookId]);
     refs.moduleBtnAdd.insertAdjacentHTML('afterend', readyRender);
    };
-}
 
 document.addEventListener("keydown", event => {
   if (event.key === "Escape") {
@@ -80,10 +81,5 @@ function renderCardModal(idBook) {
     }).join('');
   };
 
-  async function addBookLocalStorage() {
-    console.log('add');
-  };
-
-  refs.moduleBtnAdd.addEventListener('click', addBookLocalStorage);
 
 export {clickToCategory, handlerBookClick}

@@ -8,6 +8,8 @@ const refs = {
   sidebarCategories: document.querySelector('.js-categories'),
   modalClose:  document.querySelector(".module-close-btn"),
   moduleBtnAdd: document.querySelector('.btn-module-add'),
+  add: document.querySelector('.add'),
+  remove: document.querySelector('.remove'),
 };
 
 export { refs }

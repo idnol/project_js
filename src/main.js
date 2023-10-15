@@ -8,6 +8,7 @@ refs.bookCategories.addEventListener('click', clickToCategory)
 refs.sidebarCategories.addEventListener('click', clickToCategory)
 
 refs.books.addEventListener('click', handlerBookClick)
+
 // toggleMenu();
 getTopBooks();
 bookSlider();
