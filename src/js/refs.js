@@ -6,6 +6,11 @@ const refs = {
   books: document.querySelector('.js-books'),
   bookCategories: document.querySelector('.js-book-categories'),
   sidebarCategories: document.querySelector('.js-categories'),
+
+
+  checkbox: document.querySelector('input[type="checkbox"]'),
+  body: document.querySelector('body'),
+
 };
 
 export { refs };
