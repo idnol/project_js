@@ -36,7 +36,6 @@
 .book-card {
   width: calc((100% - 40px));
   height: auto;
-
   cursor: pointer;
 }
 
