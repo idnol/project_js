@@ -1,6 +1,7 @@
 import {refs} from './refs.js';
 import { renderAllBooksInCategory } from './all-category-books.js';
 import { getTopBooks, getBook } from './api.js';
+import { addToBasket } from './basket.js';
 
 async function clickToCategory(e) {
   if (e.target.classList.contains('js-category-button') || e.target.classList.contains('js-category')) {
@@ -33,72 +34,35 @@ async function renderBooks(e) {
 }
 
 // MODAL WINDOW
- 
+
 async function handlerBookClick(e) {
-  const blockRender = document.querySelector('.block-module-info');
-
-  if (blockRender) {
-   blockRender.innerHTML = '';
-  };
-
-  const target = await e.target.closest('li')
-
-    target.addEventListener('click', toggleModal)
-    const dynamicBookId = await getBook(target.dataset.id)
-
-    const title = dynamicBookId.data.title;
-
-
-    console.log([dynamicBookId]);
-    const readyRender = await renderCardModal([dynamicBookId]);
-    refs.moduleBtnAdd.insertAdjacentHTML('afterend', readyRender);
-
-    refs.moduleBtnAdd.addEventListener('click', () => {
-      addToShoppingList('basket', dynamicBookId);
-    });
-   };
-
-document.addEventListener("keydown", event => {
-  try{
-    if (event.key === "Escape") {
-      toggleModal()
+if (refs.modal) {
+   refs.modal.innerHTML = '';
   }
-  window.removeEventListener('keydown');
-}catch{
-  console.error();
+  const target = e.target.closest('li.book-card')
+  if (target) {
+    await addToBasket(e, target);
+    toggleModal();
+  }
 }
 
-});
-
+function closeModal() {
+  if (event.key === 'Escape') {
+    toggleModal();
+    window.removeEventListener('keydown', closeModal);
+  }
+}
 
 function toggleModal() {
   document.querySelector(".js-modal").classList.toggle("hidden");
   document.body.classList.toggle("no-scroll");
   document.body.classList.toggle("color-body");
-};
+}
 
-refs.modalClose.addEventListener("click", toggleModal)
-
-function renderCardModal(idBook) {
-    return idBook.map(({ data:{ book_image, author, amazon_product_url, description, title, } }) => {
-        return  `<div class="block-module-info">
-        <img class="modal-book-image" src="${book_image}">
-        <ul class="block-info">
-        <h2>${title}</h2>
-        <p class="author">${author}</p>
-        <p class="module-description">${description}</p>
-        <a class="amazon" href="${amazon_product_url}"><img class="amazon-m" src="../img/amazon-img-m.png"></a>
-        <a class="book" href=""><img class="book-link-m" src="../img/book-image-m.png"></a>
-        </ul>
-        </div>`
-    }).join('');
-  };
-
-  function addToShoppingList(basket, value) {
-    const bookState = JSON.stringify(value);
-
-    localStorage.setItem(basket, bookState);
-  };
+function addToShoppingList(basket, value) {
+  const bookState = JSON.stringify(value);
+  localStorage.setItem(basket, bookState);
+}
 
 
-export {clickToCategory, handlerBookClick}
+export {clickToCategory, handlerBookClick, closeModal, toggleModal}

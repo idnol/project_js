@@ -4,15 +4,16 @@ import { getBooksForCategory } from './js/api';
 import { sliderBook } from './js/slider';
 import { refs } from './js/refs.js';
 import { getTopBooks, getCategoryList } from './js/api';
-import { bookSlider } from './js/slider';
-import { clickToCategory, handlerBookClick } from './js/handlers'
+import { clickToCategory, handlerBookClick, closeModal, toggleModal } from './js/handlers'
 
 refs.bookCategories.addEventListener('click', clickToCategory);
 refs.sidebarCategories.addEventListener('click', clickToCategory);
 refs.books.addEventListener('click', handlerBookClick)
+document.addEventListener("keydown", closeModal);
+refs.modalClose.addEventListener("click", toggleModal)
 
-getTopBooks();
-bookSlider();
-getCategoryList();
+getTopBooks().then(r => {});
+sliderBook();
+getCategoryList().then(r => {});
 
 // toggleMenu();

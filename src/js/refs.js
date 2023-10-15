@@ -9,7 +9,9 @@ const refs = {
   checkbox: document.querySelector('input[type="checkbox"]'),
   body: document.querySelector('body'),
   modalClose: document.querySelector('.module-close-btn'),
-  moduleBtnAdd: document.querySelector('.btn-module-add'),
+  modalBtnAdd: document.querySelector('.btn-module-add'),
+  modal: document.querySelector('.block-module-info'),
+  modalInfo: document.querySelector('.js-modal-info')
 };
 
 export { refs };
