@@ -4,12 +4,10 @@ import { getTopBooks, getBook } from './api.js';
 import { addToBasket, removeItemFromStorage, setStorage } from './basket.js';
 
 async function clickToCategory(e) {
-  if (
-    e.target.classList.contains('js-category-button') ||
-    e.target.classList.contains('js-category')
-  ) {
+  if ( e.target.classList.contains('js-category-button') || e.target.classList.contains('js-category') ) {
     await renderBooks(e);
     if (e.target.classList.contains('js-category')) {
+      document.querySelector('.js-all').classList.remove('active')
       document.querySelectorAll('.js-category').forEach(item => {
         item.classList.remove('active');
       });
@@ -18,6 +16,10 @@ async function clickToCategory(e) {
   }
 
   if (e.target.classList.contains('js-all')) {
+    document.querySelectorAll('.js-category').forEach(item => {
+      item.classList.remove('active');
+    });
+    e.target.classList.add('active')
     document.querySelector('.js-category-list').remove();
     const title = document.createElement('h1');
     title.classList.add('books-title');
@@ -27,6 +29,7 @@ async function clickToCategory(e) {
     refs.books.appendChild(title);
     refs.books.appendChild(wrapper);
     await getTopBooks();
+    document.querySelector('.js-book-categories').addEventListener('click', clickToCategory);
   }
 }
 
