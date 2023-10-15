@@ -18,11 +18,9 @@ let currentPage = 1;
 let totalBooks = localStorageBooks.length;
 let totalPages = Math.ceil(totalBooks / booksPerPage);
 let paginationMarkup = '';
-
   if (currentPage > 1) {
   toStartButton.classList.remove('disabled');
 }
-
 function getBooksFromLocalStorage(key, currentPage, booksPerPage) {
   const localStorageBooks = JSON.parse(localStorage.getItem(key)) || [];
   const startIndex = (currentPage - 1) * booksPerPage;
@@ -30,7 +28,6 @@ function getBooksFromLocalStorage(key, currentPage, booksPerPage) {
   const booksToDisplay = localStorageBooks.slice(startIndex, endIndex);
   return createBookFromSLocalStorageMarkup(booksToDisplay);
 }
-
 shoppingList.innerHTML = getBooksFromLocalStorage(
   KEY_BOOK,
   currentPage,
@@ -45,7 +42,6 @@ function updateStaticButtons() {
     toStartButton.classList.remove('disabled');
     toPrevButton.classList.remove('disabled');
   }
-
   if (currentPage === totalPages) {
     toNextButton.classList.add('disabled');
     toEndButton.classList.add('disabled');
@@ -86,10 +82,7 @@ pageButtons.forEach(button => {
 });
 
 
-
 updatePagination(totalPages, currentPage);
-
-
 
 toStartButton.addEventListener('click', () => {
   if (currentPage > 1) {
@@ -99,18 +92,15 @@ toStartButton.addEventListener('click', () => {
       currentPage,
       booksPerPage
     );
-
     pageButtons.forEach(btn => {
       btn.classList.remove('active');
     });
-
     pageButtons[0].classList.add('active');
     updatePagination(totalPages, currentPage);
     updateStaticButtons();
     currentPage = currentPage;
   }
 });
-
 toPrevButton.addEventListener('click', () => {
   if (currentPage > 1) {
     currentPage--;
@@ -122,7 +112,6 @@ toPrevButton.addEventListener('click', () => {
     pageButtons.forEach(btn => {
       btn.classList.remove('active');
     });
-
     pageButtons[currentPage - 1].classList.add('active');
     updatePagination(totalPages, currentPage);
     updateStaticButtons();
@@ -147,7 +136,6 @@ toNextButton.addEventListener('click', () => {
     currentPage = currentPage;
   }
 });
-
 toEndButton.addEventListener('click', () => {
   if (currentPage < totalPages) {
     currentPage = totalPages;
@@ -156,45 +144,35 @@ toEndButton.addEventListener('click', () => {
       currentPage,
       booksPerPage
     );
-
     pageButtons.forEach(btn => {
       btn.classList.remove('active');
     });
-
     pageButtons[pageButtons.length - 1].classList.add('active');
-
     updatePagination(totalPages, currentPage);
     updateStaticButtons();
     currentPage = currentPage;
   }
 });
-
 function deleteBookFromLocalStorage(bookId) {
   const localStorageBooks = JSON.parse(localStorage.getItem(KEY_BOOK)) || [];
   const updatedBooks = localStorageBooks.filter(book => book._id !== bookId);
   const newTotalPages = Math.ceil(updatedBooks.length / booksPerPage);
   console.log(newTotalPages)
-
   localStorage.setItem(KEY_BOOK, JSON.stringify(updatedBooks));
   shoppingList.innerHTML = getBooksFromLocalStorage(KEY_BOOK);
   if (updatedBooks.length === 0) {
     shoppingList.innerHTML = createBookFromSLocalStorageMarkup(updatedBooks);
   }
-
   totalPages = Math.ceil(updatedBooks.length / booksPerPage);
   console.log(totalPages)
-
   if (newTotalPages < totalPages) {
     if (currentPage > 1) {
       currentPage--;
       const prevPageButton = pageButtons[currentPage - 1];
-      
       pageButtons.forEach(btn => btn.classList.remove('active'));
-      
       prevPageButton.classList.add('active');
     } else {
         totalPages = newTotalPages;
-
         if (totalPages === 0) {
           pagination.style.display = 'none';
         }
@@ -207,10 +185,8 @@ function deleteBookFromLocalStorage(bookId) {
     else {
       totalPages = newTotalPages;
     }
-  
-    
   }
-  totalPages = newTotalPages; 
+  totalPages = newTotalPages;
 localStorage.setItem(KEY_BOOK, JSON.stringify(updatedBooks));
 updatePagination(totalPages, currentPage);
 shoppingList.innerHTML = getBooksFromLocalStorage(
@@ -218,12 +194,8 @@ shoppingList.innerHTML = getBooksFromLocalStorage(
   currentPage,
   booksPerPage
 );
-
 updateStaticButtons();
-
-
 }
-
 shoppingList.addEventListener('click', function (event) {
   if (event.target.classList.contains('book_delete-btn')) {
     const bookId = event.target.dataset.id;
