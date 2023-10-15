@@ -11,6 +11,10 @@
   color: #4f2ee8;
 }
 
+.dark-theme .books-title {
+  color: #fff;
+}
+
 .category-name {
   color: #b4afaf;
   font-family: DM Sans;
@@ -39,6 +43,11 @@
   margin-top: 8px;
   margin-left: auto;
   transition: 250ms ease;
+}
+
+.dark-theme .category-button {
+  color: #fff;
+  background: #202024;
 }
 
 .category-button:hover,
