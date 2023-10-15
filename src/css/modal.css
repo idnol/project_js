@@ -7,10 +7,23 @@
   overflow: hidden;
 }
 
-.svg-amazon{
+.amazon-m{
   width: 62px;
   height: 19px;
-  background-color: black;
+  filter: grayscale(100%);
+}
+.amazon-m:hover{
+  filter: drop-shadow(0px 3px 3px rgba(0,0,0,.35));
+}
+
+.book-link-m:hover{
+  filter: drop-shadow(0px 3px 3px rgba(0,0,0,.35));
+}
+
+.book-link-m{
+width: 33px;
+height: 32px;
+filter: grayscale(100%)
 }
 
 .backdrop {
@@ -49,6 +62,22 @@
     border: 2px solid rgba(17, 17, 17, 1);
     border-radius: 18px;
     background-color: #fff;
+  }
+
+  .block-info{
+    display: block;
+    margin-top: 40px;
+  }
+
+  .author{
+    margin-top: 10px;
+    color: rgba(180, 175, 175, 1);
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: -0.04em;
   }
   
   .module-close-btn{

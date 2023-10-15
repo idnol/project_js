@@ -74,8 +74,8 @@ function renderCardModal(idBook) {
         <h2>${title}</h2>
         <p class="author">${author}</p>
         <p class="module-description">${description}</p>
-        <a class="amazon" href="${amazon_product_url}"><svg class="svg-amazon"><use class="styles-amazon" href='../img/image-amazon.svg'></use> </svg></a>
-        <a class="book" href=""><svg class="svg-amazon"><use class="styles-amazon" href='../img/book-image.svg'></use> </svg></a>
+        <a class="amazon" href="${amazon_product_url}"><img class="amazon-m" src="../img/amazon-img-m.png"></a>
+        <a class="book" href=""><img class="book-link-m" src="../img/book-image-m.png"></a>
         </ul>
         </div>`
     }).join('');
