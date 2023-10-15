@@ -13,40 +13,60 @@ body {
   padding: 0;
 }
 
-.title {
-    padding-top: 24px;
-    padding-left: 40px;
-    margin-bottom: 40px;
-}
-
-.swiper {
-  /*width: 100%;*/
-  /*height: 500px;*/
+.contaner { 
+  position: relative;
   width: 335px;
   height: 474px;
   border-radius: 16px;
   background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4F2EE8 18.03%, #FFF 100%);
   box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.10);
+    
+}
+.title-slider {
+    padding-top: 24px;
+    padding-left: 40px;
+    margin-bottom: 42px;
+    color: #FFF;
+    font-family: DM Sans;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; 
+    letter-spacing: -0.88px;
+    display: inline-flex;
+    align-items: center;
+}
+.title-slider::after {
+    content: "";
+    margin-left: 12px;
+    width: 20px;
+    height: 32px;
+    background-image: url("../imeges_slider/icon.svg");
+    background-size: contain;
+}
+.gallery {
+    
+    position: relative;
+    overflow: hidden;
+    overflow: clip;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+    display: flex;
+    width: 159px;
+    height: 292px;
+    margin: 0;
+    margin-left: 40px;
+    margin-right: 136px;
 }
 
-.swiper-button-prev {
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-    word-wrap: normal !important;
-}
+
 .swiper-wrapper {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    margin: 0;
+    padding: 0;
     
 }
 .swiper-slide {
@@ -55,11 +75,32 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .swiper-slide img {
   display: block;
+  object-fit: cover;
+  
+}
+
+.swiper-btn-prev
+ {
+  
+  position: absolute;
+  display: block;
+  top: 56px;
+  right: 148px;
+  width: 38px;
+  height: 38px;
+  background-color: #FFF;
+  border-radius: 50%;
+
+}
+
+.up-icon {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
+
+

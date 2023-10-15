@@ -1,5 +1,5 @@
-import Swiper from 'swiper';
-import 'swiper/css';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 
 
 //npm install swiper
@@ -9,8 +9,10 @@ function getSLider() {
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 6,
       spaceBetween: 20,
+      mousewheel: true,
       direction: "vertical",
       navigation: {
+        
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
@@ -18,3 +20,6 @@ function getSLider() {
   }
   
   export {getSLider}
+
+
+  
