@@ -1,4 +1,5 @@
 import { Swiper } from 'swiper/core';
+import 'swiper/css/navigation';
 
 function sliderBook() {
   const swiper = new Swiper('.mySwiper', {
@@ -17,4 +18,16 @@ function sliderBook() {
   });
 }
 
-export { sliderBook };
+function supportListSlider() {
+  const swiper = new Swiper('.support-swiper', {
+    slidesPerView: 6,
+    spaceBetween: 20,
+    direction: 'vertical',
+    navigation: {
+      nextEl: '.swiper-button-down',
+      prevEl: '.swiper-button-up',
+    },
+  });
+}
+
+export { sliderBook, supportListSlider };

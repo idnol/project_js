@@ -14,6 +14,7 @@ const refs = {
   modalInfo: document.querySelector('.js-modal-info'),
   moduleBtnAdd: document.querySelector('.btn-module-add'),
   scroll: document.getElementById('scroll'),
+  supportSwiper: document.querySelector('.mySupportBlockSwiper'),
 };
 
 export { refs };

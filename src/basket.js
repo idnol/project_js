@@ -99,7 +99,7 @@ toStartButton.addEventListener('click', () => {
     pageButtons[0].classList.add('active');
     updatePagination(totalPages, currentPage);
     updateStaticButtons();
-    currentPage = currentPage;
+    // currentPage = currentPage;
   }
 });
 toPrevButton.addEventListener('click', () => {
@@ -116,7 +116,7 @@ toPrevButton.addEventListener('click', () => {
     pageButtons[currentPage - 1].classList.add('active');
     updatePagination(totalPages, currentPage);
     updateStaticButtons();
-    currentPage = currentPage;
+    // currentPage = currentPage;
   }
 });
 toNextButton.addEventListener('click', () => {
@@ -134,7 +134,7 @@ toNextButton.addEventListener('click', () => {
     pageButtons[currentPage - 1].classList.add('active');
     updatePagination(totalPages, currentPage);
     updateStaticButtons();
-    currentPage = currentPage;
+    // currentPage = currentPage;
   }
 });
 toEndButton.addEventListener('click', () => {
@@ -151,7 +151,7 @@ toEndButton.addEventListener('click', () => {
     pageButtons[pageButtons.length - 1].classList.add('active');
     updatePagination(totalPages, currentPage);
     updateStaticButtons();
-    currentPage = currentPage;
+    // currentPage = currentPage;
   }
 });
 
@@ -181,7 +181,7 @@ function deleteBookFromLocalStorage(bookId) {
         totalPages = newTotalPages;
       }
     }
-  totalPages = newTotalPages; 
+  totalPages = newTotalPages;
   localStorage.setItem(KEY_BOOK, JSON.stringify(updatedBooks));
   updatePagination(totalPages, currentPage);
   shoppingList.innerHTML = getBooksFromLocalStorage(

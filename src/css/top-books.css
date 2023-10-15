@@ -27,12 +27,6 @@
   margin-bottom: 18px;
 }
 
-/* .book-list {
-  display: flex;
-  gap: 25px;
-  margin-bottom: 8px;
-} */
-
 .category-button {
   display: block;
   color: #111111;
@@ -64,6 +58,11 @@
 }
 .swiper.mySwiper {
   z-index: 0;
+}
+
+.dark-theme .category-button {
+  background-color: transparent;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {

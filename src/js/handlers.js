@@ -35,8 +35,6 @@ async function renderBooks(e) {
   await renderAllBooksInCategory(e.target.dataset.name);
 }
 
-// MODAL WINDOW
-
 async function handlerBookClick(e) {
   if (refs.modal) {
     refs.modal.innerHTML = '';
@@ -74,10 +72,4 @@ function handlerBookScroll() {
   }
 }
 
-export {
-  clickToCategory,
-  handlerBookClick,
-  closeModal,
-  toggleModal,
-  handlerBookScroll,
-};
+export {clickToCategory, handlerBookClick, handlerBookScroll, closeModal, toggleModal}
