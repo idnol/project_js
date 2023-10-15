@@ -54,7 +54,7 @@ async function handlerBookClick(e) {
     refs.moduleBtnAdd.insertAdjacentHTML('afterend', readyRender);
 
     refs.moduleBtnAdd.addEventListener('click', () => {
-      addToShoppingList(title, dynamicBookId);
+      addToShoppingList('basket', dynamicBookId);
     });
    };
 
@@ -94,10 +94,10 @@ function renderCardModal(idBook) {
     }).join('');
   };
 
-  function addToShoppingList(key, value) {
+  function addToShoppingList(basket, value) {
     const bookState = JSON.stringify(value);
 
-    localStorage.setItem(key, bookState);
+    localStorage.setItem(basket, bookState);
   };
 
 
