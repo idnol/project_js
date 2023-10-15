@@ -267,9 +267,9 @@ align-items: flex-start;
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  gap: 10px;
+  gap: 8px;
 }
-.page-btn {
+.page-btn ,.static-btn{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -287,7 +287,21 @@ align-items: flex-start;
   cursor: pointer;
   transition: color .4s linear,border .5s linear,background-color .3s linear;
 }
-
+.static-btn{
+  background-color: #EAC645;
+}
+.pagination_btn-to-prev{
+  margin-right: 6px;
+}
+.pagination_btn-to-next{
+  margin-left: 6px;
+}
+.pagination_btn-to-start .move{
+margin-right: -15px;
+}
+.pagination_btn-to-end .move{
+  margin-right: -15px;
+  }
 .page-btn.active {
   border: 1px solid transparent;
   color: var(--whiteA, #FFF);
@@ -303,9 +317,24 @@ align-items: flex-start;
 
 }
 @media (min-width: 768px) {
-  .page-btn {
-   width: 44px;
-   height: 44px;
-
+  .pagination{
+    gap: 10px;
+  }
+  .page-btn, .static-btn {
+    width: 44px;
+    height: 44px;
+  }
+  .pagination_btn-to-prev{
+    margin-right: 14px;
+  }
+  .pagination_btn-to-next{
+    margin-left: 14px;
   }
 }
+.static-btn.disabled{
+  background-color: black;
+}
+.static-btn.disabled svg{
+fill: grey;}
+.dark-theme .static-btn.disabled svg{
+  fill: white;}
