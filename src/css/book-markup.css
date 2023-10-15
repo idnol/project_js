@@ -3,6 +3,7 @@
 }
 
 .books-category-title {
+  color: #111;
   font-family: DM Sans;
   font-size: 32px;
   font-style: normal;
@@ -16,6 +17,10 @@
 
 .books-category-title span {
   color: #4f2ee8;
+}
+
+.dark-theme .books-category-title {
+  color: #fff;
 }
 
 .books-gallery {
@@ -36,7 +41,6 @@
 .book-card {
   width: calc((100% - 40px));
   height: auto;
-
   cursor: pointer;
 }
 
@@ -69,6 +73,10 @@
   text-overflow: ellipsis;
 }
 
+.dark-theme .book-card .info .book-title {
+  color: #fff;
+}
+
 .book-card .book-author {
   color: #b4afaf;
   font-family: DM Sans;
@@ -77,6 +85,10 @@
   font-weight: 400;
   line-height: 1.16; /* 116.667% */
   letter-spacing: -0.48px;
+}
+
+.dark-theme .book-card .book-author {
+  color: #b4afaf;
 }
 
 .book-card-overlay {

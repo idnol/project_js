@@ -6,7 +6,14 @@ const refs = {
   books: document.querySelector('.js-books'),
   bookCategories: document.querySelector('.js-book-categories'),
   sidebarCategories: document.querySelector('.js-categories'),
-
+  checkbox: document.querySelector('input[type="checkbox"]'),
+  body: document.querySelector('body'),
+  modalClose: document.querySelector('.module-close-btn'),
+  modalBtnAdd: document.querySelector('.btn-module-add'),
+  modal: document.querySelector('.block-module-info'),
+  modalInfo: document.querySelector('.js-modal-info'),
+  moduleBtnAdd: document.querySelector('.btn-module-add'),
+  scroll: document.getElementById('scroll'),
 };
 
-export { refs }
+export { refs };
