@@ -44,11 +44,11 @@ function createMarkup(apiResponse) {
         .join('');
       return `<ul class="category-books">
               <h2 class="category-name">${list_name}</h2>
-              <ul class="books-gallery list swiper mySwiper">
-              <div class="swiper-wrapper">
+              <div class="books-gallery list swiper mySwiper">
+              <ul class="swiper-wrapper">
                   ${bookList}
-                  </div>
-              </ul>
+                  </ul>
+              </div>
               <button class="category-button js-category-button" type="button" data-name="${list_name}">see more</button>
           </ul>`;
     })
@@ -56,4 +56,17 @@ function createMarkup(apiResponse) {
   renderMarkup(markup);
 }
 
-export { createMarkup, getCategoryMarkup };
+async function renderCardModal(idBook) {
+  const book = await idBook;
+
+  return  `<img class="modal-book-image" src="${book.book_image}">
+          <div class="block-info">
+          <h2>${book.title}</h2>
+          <p class="author">${book.author}</p>
+          <p class="module-description">${book.description}</p>
+          <a class="amazon" href="${book.amazon_product_url}"><img class="amazon-m" src="../img/amazon-img-m.png"></a>
+          <a class="book" href=""><img class="book-link-m" src="../img/book-image-m.png"></a>
+          </div>`
+}
+
+export { createMarkup, getCategoryMarkup, renderCardModal };
