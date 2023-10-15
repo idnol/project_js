@@ -1,5 +1,4 @@
 import { Swiper } from 'swiper/core';
-// import 'swiper/css';
 import 'swiper/css/navigation';
 
 function sliderBook() {
