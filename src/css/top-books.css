@@ -11,6 +11,10 @@
   color: #4f2ee8;
 }
 
+.dark-theme .books-title {
+  color: #fff;
+}
+
 .category-name {
   color: #b4afaf;
   font-family: DM Sans;
@@ -22,12 +26,6 @@
   text-transform: uppercase;
   margin-bottom: 18px;
 }
-
-/* .book-list {
-  display: flex;
-  gap: 25px;
-  margin-bottom: 8px;
-} */
 
 .category-button {
   display: block;
@@ -47,6 +45,11 @@
   transition: 250ms ease;
 }
 
+.dark-theme .category-button {
+  color: #fff;
+  background: #202024;
+}
+
 .category-button:hover,
 .category-button:focus {
   border-color: #111111;
@@ -55,6 +58,11 @@
 }
 .swiper.mySwiper {
   z-index: 0;
+}
+
+.dark-theme .category-button {
+  background-color: transparent;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 768px) {

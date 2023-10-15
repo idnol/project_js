@@ -3,14 +3,14 @@ import { renderMarkup } from './books';
 function getCategoryMarkup(listResult) {
   const categoriesList = listResult
     .map(item => {
-      return `<li class='categories-item js-category list' data-name='${item.list_name}'>${item.list_name}</li>`;
+      return `<li class='categories-item js-category' data-name='${item.list_name}'>${item.list_name}</li>`;
     })
     .join('');
 
   const markup = `
 
         <ul class='categories'>
-        <li class="categories-item js-all list">All categories</li>
+        <li class="categories-item js-all active">All categories</li>
             ${categoriesList}
         </ul>`;
 

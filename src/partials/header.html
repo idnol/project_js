@@ -1,61 +1,63 @@
 <header class="page-header">
-  <div class="header-container">
+  <div class='container'>
+    <div class='row'>
+      <div class="header-container">
 
-    <div class="header-logo">
-      <nav class="header-nav">
-        <a href="/" class="header-logo-link link">
-          <svg class="logo-icon">
-            <use href="../img/symbol-defs.svg#icon-logo"></use>
-          </svg>
-          <svg class="logo-icon-name logo-icon-name-js">
-            <use href="../img/symbol-defs.svg#icon-Bookshelf"></use>
-          </svg>
-        </a>
-
-        <ul class="menu list">
-          <li class="menu-item">
-            <a href="/" class="header-nav-link link current-page nav-js-home">Home</a>
-          </li>
-          <li class="menu-item">
-            <a href="/basket.html" class="header-nav-link link nav-js-shipping">Shopping list
-            <svg class="shoplist-icon shoplist-icon-js">
-              <use href="../img/symbol-defs.svg#icon-uil_cart"></use>
-            </svg>
+        <div class="header-logo">
+          <nav class="header-nav">
+            <a href="/" class="header-logo-link link">
+              <svg class="logo-icon">
+                <use href="../img/symbol-defs.svg#icon-logo"></use>
+              </svg>
+              <svg class="logo-icon-name logo-icon-name-js">
+                <use href="../img/symbol-defs.svg#icon-Bookshelf"></use>
+              </svg>
             </a>
-          </li>
-        </ul>
-      </nav>
+
+            <ul class="menu list">
+              <li class="menu-item">
+                <a href="/" class="header-nav-link link current-page nav-js-home">Home</a>
+              </li>
+              <li class="menu-item">
+                <a href="/basket.html" class="header-nav-link link nav-js-shipping">Shopping list
+                  <svg class="shoplist-icon shoplist-icon-js">
+                    <use href="../img/symbol-defs.svg#icon-uil_cart"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-mob-menu">
+          <div class="switch-theme">
+            <input
+              class="switch-input visually-hidden"
+              type="checkbox"
+              name="theme"
+              value="check-theme"
+              id="theme">
+            <label for="theme" id="switch" class="switch"></label>
+          </div>
+          <!-- Sign up -->
+          <button type="button" class="btn-sign-up"></button>
+
+          <!-- mob-menu -->
+          <button type="button" class="menu-open-btn js-open-menu ">
+            <svg class="icon-burger icon-burger-js">
+              <use href="../img/symbol-defs.svg#icon-align-left"></use>
+            </svg>
+          </button>
+
+          <button type="button" class="menu-close-btn js-close-menu visually-hidden">
+            <svg class="icon-munu-close icon-munu-close-js">
+              <use href="../img/symbol-defs.svg#icon-x-close"></use>
+            </svg>
+          </button>
+        </div>
     </div>
+  </div>
 
-    <div class="header-mob-menu">
-      
-
-      <div class="switch-theme">
-        
-          <input 
-          class="switch-input visually-hidden" 
-          type="checkbox" 
-          name="theme" 
-          value="check-theme"
-          id="theme">
-          <label for="theme" id="switch" class="switch"></label>
-      </div>
-      <!-- Sign up -->  
-      <button type="button" class="btn-sign-up"></button>
-
-      <!-- mob-menu -->      
-      <button type="button" class="menu-open-btn js-open-menu ">
-        <svg class="icon-burger icon-burger-js">
-          <use href="../img/symbol-defs.svg#icon-align-left"></use>
-        </svg>
-      </button>
-
-      <button type="button" class="menu-close-btn js-close-menu visually-hidden">
-        <svg class="icon-munu-close icon-munu-close-js">
-          <use href="../img/symbol-defs.svg#icon-x-close"></use>
-        </svg>
-      </button>
-    </div>
 </header>
 
 

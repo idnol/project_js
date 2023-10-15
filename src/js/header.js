@@ -44,13 +44,20 @@ const theme = localStorage.getItem('theme') || 'light-theme';
 
 refs.checkbox.addEventListener('change', toggleTheme);
 
+if (theme === 'dark-theme') {
+  refs.body.classList.add('dark-theme');
+  refs.checkbox.checked = true;
+}
+
 function toggleTheme() {
   if (this.checked) {
     refs.body.classList.add('dark-theme');
     localStorage.setItem('theme', 'dark-theme');
+    // refs.checkbox.checked = true;
   } else {
     refs.body.classList.remove('dark-theme');
     localStorage.setItem('theme', 'light-theme');
+    // refs.checkbox.checked = false;
   }
 }
 

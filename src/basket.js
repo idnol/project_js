@@ -52,7 +52,7 @@ refs.toStartButton.addEventListener('click', () => {
     pageButtons[0].classList.add('active');
     updatePagination(totalPages, currentPage);
     updateStaticButtons();
-    currentPage = currentPage;
+    // currentPage = currentPage;
   }
 });
 refs.toPrevButton.addEventListener('click', () => {
