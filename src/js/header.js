@@ -1,7 +1,6 @@
 import { refs } from './refs.js';
 import { closeMobileMenuToDesktop, toggleMenu } from './handlers.js';
 // Mob-menu
-
 refs.openMenuBtn.addEventListener('click', toggleMenu);
 refs.closeMenuBtn.addEventListener('click', toggleMenu);
 window.addEventListener('resize', closeMobileMenuToDesktop);
@@ -18,7 +17,6 @@ function matchMedia(event) {
 }
 
 // Current-page
-
 let currentURL = window.location.href;
 let links = document.getElementsByTagName('a');
 
@@ -31,7 +29,6 @@ for (let link of links) {
 }
 
 // dark theme
-
 const theme = localStorage.getItem('theme') || 'light-theme';
 
 if (theme === 'dark-theme') {

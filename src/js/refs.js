@@ -1,5 +1,6 @@
 const refs = {
   API: 'https://books-backend.p.goit.global',
+  KEY_BOOK: 'basket',
   mobileMenu: document.querySelector('.js-mob-menu'),
   openMenuBtn: document.querySelector('.js-open-menu'),
   closeMenuBtn: document.querySelector('.js-close-menu'),
@@ -21,6 +22,8 @@ const refs = {
   toNextButton :document.querySelector('.pagination_btn-to-next'),
   toEndButton :document.querySelector('.pagination_btn-to-end'),
   supportSwiper: document.querySelector('.mySupportBlockSwiper'),
+  booksPerPage: 3,
+
 };
 
 export { refs };

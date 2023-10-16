@@ -19,13 +19,11 @@ async function getBooksForCategory(searchQuery) {
 
 async function getCategoryList() {
   try {
-    var spinner = new Spinner(opts).spin(refs.books);
     const result = await axios.get(`${refs.API}/books/category-list`);
     refs.sidebarCategories.insertAdjacentHTML(
       'beforeend',
       getCategoryMarkup(result.data)
     );
-    spinner.stop();
   } catch (error) {
     console.log(error, 'error');
   }

@@ -1,4 +1,3 @@
-
 function getBooksFromLocalStorage(key, currentPage, booksPerPage,) {
     const localStorageBooks = JSON.parse(localStorage.getItem(key)) || [];
     const startIndex = (currentPage - 1) * booksPerPage;
@@ -9,6 +8,5 @@ function getBooksFromLocalStorage(key, currentPage, booksPerPage,) {
   }
 
 
-  
+
   export { getBooksFromLocalStorage };
-  
