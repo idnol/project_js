@@ -4,7 +4,8 @@ import { getBooksFromLocalStorage } from './js/getBooksFromLocalStorage.js';
 import { updatePagination,updateStaticButtons} from './js/updatePagination.js';
 import {handlePageButtonClick} from './js/paginationHandlers.js';
 import { deleteBookFromLocalStorage } from './js/deleteBookFRomLocalStorage.js';
-
+import { supportListSlider } from './js/slider';
+supportListSlider();
 const KEY_BOOK = 'basket';
 const booksPerPage = 3;
 const spanElements = refs.pagination.querySelectorAll('span');
