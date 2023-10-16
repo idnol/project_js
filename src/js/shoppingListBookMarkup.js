@@ -36,8 +36,8 @@ function createBookFromSLocalStorageMarkup(arr) {
                         <a target="_blank" href="${link.url}">
                             ${
                               link.name === 'Amazon'
-                                ? '<img class="book_buy-links-svg amazon" src="../img/amazon.png" />'
-                                : '<img class="book_buy-links-svg ibook" src="../img/ibook.png" />'
+                                ? '<img class="book_buy-links-svg amazon" src="./src/img/amazon.png" />'
+                                : '<img class="book_buy-links-svg ibook" src="./src/img/ibook.png" />'
                             }
                         </a>
                     </li>
