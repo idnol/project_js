@@ -4,7 +4,8 @@ import { getBooksFromLocalStorage } from './js/getBooksFromLocalStorage.js';
 import { updatePagination,updateStaticButtons} from './js/updatePagination.js';
 import {handlePageButtonClick} from './js/paginationHandlers.js';
 import { deleteBookFromLocalStorage } from './js/deleteBookFRomLocalStorage.js';
-
+import { supportListSlider } from './js/slider';
+supportListSlider();
 const KEY_BOOK = 'basket';
 const booksPerPage = 3;
 const spanElements = refs.pagination.querySelectorAll('span');
@@ -15,7 +16,7 @@ const localStorageBooks = JSON.parse(localStorage.getItem(KEY_BOOK)) || [];
 let currentPage = 1;
 let totalBooks = localStorageBooks.length;
 let totalPages = Math.ceil(totalBooks / booksPerPage);
-localStorage.setItem(KEY_BOOK, JSON.stringify(dataLocalarr));
+
 
 if (currentPage > 1) {
   refs.toStartButton.classList.remove('disabled');
@@ -52,7 +53,6 @@ refs.toStartButton.addEventListener('click', () => {
     pageButtons[0].classList.add('active');
     updatePagination(totalPages, currentPage);
     updateStaticButtons();
-    // currentPage = currentPage;
   }
 });
 refs.toPrevButton.addEventListener('click', () => {
@@ -80,7 +80,7 @@ refs.toEndButton.addEventListener('click', () => {
   if (currentPage < totalPages) {
     currentPage = totalPages;
     updateShoppingListAndPagination(KEY_BOOK, currentPage, booksPerPage, refs, pageButtons);
-
+    
     pageButtons[pageButtons.length - 1].classList.add('active');
     updatePagination(totalPages, currentPage);
     updateStaticButtons();
