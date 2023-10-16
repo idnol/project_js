@@ -194,6 +194,7 @@
   gap: 4px;
   align-items: center;
   min-width: 118px;
+  width: max-content;
 }
 
 .mob-nav-link {

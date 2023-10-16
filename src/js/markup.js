@@ -59,6 +59,7 @@ function createMarkup(apiResponse) {
 
 async function renderCardModal(idBook) {
   const book = await idBook;
+  const apple = book.buy_links.find(item => item.name === 'Apple Books')
 
   return  `<img class="modal-book-image" src="${book.book_image}">
           <div class="block-info">
@@ -67,7 +68,7 @@ async function renderCardModal(idBook) {
           <p class="module-description">${book.description}</p>
           <div class='buttons-wrapper'>
           <a class="amazon" href="${book.amazon_product_url}"></a>
-          <a class="book" href="${book.buy_links[2].url}"></a>
+          <a class="book" href="${apple.url}"></a>
           </div>
           </div>`
 }
