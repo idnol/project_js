@@ -15,10 +15,9 @@
                       alt="${a}"
                       loading="lazy"
                     />
-                    <div class="book-overlay">
+                    <div class="book-card-overlay">
                       <p class="overlay-text">quick view</p>
                     </div>
-                    ;
                   </div>
                   <div class="info">
                     <p class="book-title">${a}</p>
@@ -52,7 +51,6 @@
                     <div class="book-card-overlay">
                       <p class="overlay-text">quick view</p>
                     </div>
-                    ;
                   </div>
                   <div class="info">
                     <p class="book-title">${n.title}</p>
