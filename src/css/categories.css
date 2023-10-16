@@ -40,9 +40,6 @@
   font-weight: 700;
   text-transform: uppercase;
 }
-.dark-theme .categories-item:first-child {
-  color: var(--yellow);
-}
 
 .categories-item:hover,
 .categories-item:focus,

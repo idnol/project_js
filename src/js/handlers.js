@@ -32,7 +32,7 @@ async function clickToCategory(e) {
     e.target.classList.add('active')
     document.querySelector('.js-category-list').remove();
     const title = document.createElement('h1');
-    title.classList.add('books-title');
+    title.classList.add('books-category-title');
     title.innerHTML = 'Best Sellers <span>Books</span>';
     const wrapper = document.createElement('div');
     wrapper.classList.add('books-wrapper', 'js-book-categories');
