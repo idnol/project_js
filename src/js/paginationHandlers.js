@@ -33,6 +33,7 @@ function updateShoppingListAndPagination(currentPage, refs, pageButtons) {
 
 function handlerEnd(currentPage, totalPages, pageButtons) {
   if (currentPage < totalPages) {
+    addNextDisabled();
     currentPage = totalPages;
     updateShoppingListAndPagination(currentPage, refs, pageButtons);
     pageButtons[pageButtons.length - 1].classList.add('active');
@@ -43,6 +44,8 @@ function handlerEnd(currentPage, totalPages, pageButtons) {
 function handlerNext(totalPages, pageButtons) {
   let page = getPage();
   if (page < totalPages) {
+    removePrevDisabled();
+    removeNextDisabled();
     page++;
     updateShoppingListAndPagination(page, refs, pageButtons);
     pageButtons[page - 1].classList.add('active');
@@ -53,6 +56,8 @@ function handlerNext(totalPages, pageButtons) {
 function handlerPrev(totalPages, pageButtons) {
   let page = getPage();
   if (page > 1) {
+    removePrevDisabled();
+    removeNextDisabled();
     page--;
     updateShoppingListAndPagination(page, refs, pageButtons);
     pageButtons[page - 1].classList.add('active');
@@ -62,6 +67,7 @@ function handlerPrev(totalPages, pageButtons) {
 function handlerStart(totalPages, pageButtons) {
   let page = getPage();
   if (page > 1) {
+    addPrevDisabled();
     page = 1;
     updateShoppingListAndPagination(1, refs, pageButtons);
     pageButtons[0].classList.add('active');
@@ -92,6 +98,26 @@ function getPage() {
 function updateAllPaginationBtn(totalPages, page) {
   updatePagination(totalPages, page);
   updateStaticButtons();
+}
+
+function removePrevDisabled() {
+  document.querySelector('.pagination_btn-to-start').classList.remove('disabled');
+  document.querySelector('.pagination_btn-to-prev').classList.remove('disabled');
+}
+
+function addPrevDisabled() {
+  document.querySelector('.pagination_btn-to-start').classList.add('disabled');
+  document.querySelector('.pagination_btn-to-prev').classList.add('disabled');
+}
+
+function removeNextDisabled() {
+  document.querySelector('.pagination_btn-to-end').classList.remove('disabled');
+  document.querySelector('.pagination_btn-to-next').classList.remove('disabled');
+}
+
+function addNextDisabled() {
+  document.querySelector('.pagination_btn-to-end').classList.add('disabled');
+  document.querySelector('.pagination_btn-to-next').classList.add('disabled');
 }
 
 export { handlePageButtonClick, updateShoppingListAndPagination, handlerEnd, handlerNext, handlerPrev, handlerStart, handlerDelete };
