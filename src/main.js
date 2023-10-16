@@ -1,5 +1,4 @@
 import { toggleMenu, matchMedia } from './js/header';
-import { renderAllBooksInCategory } from './js/all-category-books';
 import { getTopBooks, getCategoryList, getBooksForCategory } from './js/api';
 import { sliderBook, supportListSlider } from './js/slider';
 import { refs } from './js/refs.js';
@@ -19,7 +18,8 @@ refs.modalClose.addEventListener('click', toggleModal);
 window.addEventListener('scroll', handlerBookScroll);
 
 getTopBooks().then(r => {});
-sliderBook();
 getCategoryList().then(r => {});
 supportListSlider();
-// toggleMenu();
+toggleMenu();
+matchMedia();
+sliderBook();
