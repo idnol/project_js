@@ -2,6 +2,7 @@ import { refs } from './refs.js';
 import { renderAllBooksInCategory } from './all-category-books.js';
 import { getTopBooks, getBook } from './api.js';
 import { addToBasket, removeItemFromStorage, setStorage } from './basket.js';
+import { isMenuOpen } from './header.js';
 
 async function clickToCategory(e) {
   if ( e.target.classList.contains('js-category-button') || e.target.classList.contains('js-category') ) {
@@ -84,4 +85,18 @@ async function onModalBtnAddClick(e) {
   }
 }
 
-export {clickToCategory, handlerBookClick, handlerBookScroll, closeModal, toggleModal, onModalBtnAddClick}
+function closeMobileMenuToDesktop(e) {
+  if (window.innerWidth > 768) {
+    matchMedia(e);
+  }
+}
+
+function toggleMenu() {
+  refs.openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+  refs.mobileMenu.classList.toggle('is-open');
+  refs.closeMenuBtn.classList.toggle('visually-hidden');
+  refs.openMenuBtn.classList.toggle('visually-hidden');
+}
+
+
+export {clickToCategory, handlerBookClick, handlerBookScroll, closeModal, toggleModal, onModalBtnAddClick, closeMobileMenuToDesktop, toggleMenu}
