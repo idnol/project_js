@@ -17,11 +17,4 @@ getCategoryList().then(r => {});
 supportListSlider();
 toggleMenu();
 matchMedia();
-
-document.addEventListener('DOMContentLoaded', function() {
-  sliderBook();
-  // console.log(document.querySelector('.swiper-button-down'));
-  document.querySelector('.swiper-button-next').addEventListener('click', function() {
-    console.log(645564);
-  })
-})
+sliderBook();
