@@ -1,5 +1,3 @@
-
-
 const toStartButton = document.querySelector('.pagination_btn-to-start');
 const toPrevButton = document.querySelector('.pagination_btn-to-prev');
 const toNextButton = document.querySelector('.pagination_btn-to-next');
@@ -13,7 +11,7 @@ function updateStaticButtons(currentPage, totalPages) {
       toStartButton.classList.remove('disabled');
       toPrevButton.classList.remove('disabled');
     }
-  
+
     if (currentPage === totalPages) {
       toNextButton.classList.add('disabled');
       toEndButton.classList.add('disabled');
@@ -22,17 +20,17 @@ function updateStaticButtons(currentPage, totalPages) {
       toEndButton.classList.remove('disabled');
     }
   }
-  
+
 
   function updatePagination(totalPages, currentPage) {
     let paginationMarkup = '';
-  
+
     for (let i = 1; i <= totalPages; i++) {
       const isActive = i === currentPage ? 'active' : '';
       paginationMarkup += `<button class="page-btn ${isActive}" data-page="${i}">${i}</button>`;
     }
-  
+
     return paginationMarkup;
   }
-  
+
 export{updateStaticButtons,updatePagination}

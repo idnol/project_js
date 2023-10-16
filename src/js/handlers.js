@@ -5,19 +5,28 @@ import { addToBasket, removeItemFromStorage, setStorage } from './basket.js';
 import { isMenuOpen } from './header.js';
 
 async function clickToCategory(e) {
+  const categories = document.querySelectorAll('.js-category');
   if ( e.target.classList.contains('js-category-button') || e.target.classList.contains('js-category') ) {
     await renderBooks(e);
     if (e.target.classList.contains('js-category')) {
       document.querySelector('.js-all').classList.remove('active')
-      document.querySelectorAll('.js-category').forEach(item => {
+      categories.forEach(item => {
         item.classList.remove('active');
       });
       e.target.classList.add('active');
     }
+    if (e.target.classList.contains('js-category-button')) {
+      document.querySelector('.js-all').classList.remove('active')
+      categories.forEach(item => {
+        if (item.dataset.name === e.target.dataset.name) {
+          item.classList.add('active');
+        }
+      })
+    }
   }
 
   if (e.target.classList.contains('js-all')) {
-    document.querySelectorAll('.js-category').forEach(item => {
+    categories.forEach(item => {
       item.classList.remove('active');
     });
     e.target.classList.add('active')

@@ -1,15 +1,15 @@
 export var opts = {
   lines: 9, // The number of lines to draw
-  length: 10, // The length of each line
-  width: 16, // The line thickness
-  radius: 43, // The radius of the inner circle
+  length: 5, // The length of each line
+  width: 10, // The line thickness
+  radius: 20, // The radius of the inner circle
   scale: 1, // Scales overall size of the spinner
   corners: 0.7, // Corner roundness (0..1)
   speed: 0.9, // Rounds per second
   rotate: 29, // The rotation offset
   animation: 'spinner-line-shrink', // The CSS animation name for the lines
   direction: 1, // 1: clockwise, -1: counterclockwise
-  color: '#669c35', // CSS color or array of colors
+  color: '#fff', // CSS color or array of colors
   fadeColor: 'transparent', // CSS color or array of colors
   top: '48%', // Top position relative to parent
   left: '50%', // Left position relative to parent
