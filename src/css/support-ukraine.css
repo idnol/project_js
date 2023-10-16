@@ -64,33 +64,6 @@
   letter-spacing: -0.56px;
 }
 
-<<<<<<< HEAD
-=======
-.swiper-button-down {
-  position: absolute;
-  left: 50%;
-
-  bottom: 0;
-
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: var(--white);
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-
-  cursor: pointer;
-
-  transition: scale 250ms linear;
-
-  z-index: 2;
-}
-
->>>>>>> main
 .swiper-button-down:hover {
   scale: 1.1;
 }
