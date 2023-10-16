@@ -14,6 +14,12 @@ const refs = {
   modalInfo: document.querySelector('.js-modal-info'),
   moduleBtnAdd: document.querySelector('.btn-module-add'),
   scroll: document.getElementById('scroll'),
+  shoppingList : document.querySelector('.shopping-list'),
+  pagination :document.querySelector('.pagination'),
+  toStartButton :document.querySelector('.pagination_btn-to-start'),
+  toPrevButton :document.querySelector('.pagination_btn-to-prev'),
+  toNextButton :document.querySelector('.pagination_btn-to-next'),
+  toEndButton :document.querySelector('.pagination_btn-to-end'),
   supportSwiper: document.querySelector('.mySupportBlockSwiper'),
 };
 

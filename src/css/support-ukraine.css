@@ -4,8 +4,8 @@
   border-radius: 16px;
   background: radial-gradient(
     189.32% 190.93% at 59.76% -23.42%,
-    #4f2ee8 18.03%,
-    #fff 100%
+    var(--violet) 18.03%,
+    var(--white) 100%
   );
   box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
 
@@ -26,7 +26,7 @@
 }
 
 .swiper-title {
-  color: #fff;
+  color: var(--white);
   font-family: DM Sans;
   font-size: 22px;
   font-style: normal;
@@ -55,7 +55,7 @@
 }
 
 .swiper-list .list-item-number {
-  color: #fff;
+  color: var(--white);
   font-family: DM Sans;
   font-size: 14px;
   font-style: normal;
@@ -64,6 +64,33 @@
   letter-spacing: -0.56px;
 }
 
+<<<<<<< HEAD
+=======
+.swiper-button-down {
+  position: absolute;
+  left: 50%;
+
+  bottom: 0;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--white);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: scale 250ms linear;
+
+  z-index: 2;
+}
+
+>>>>>>> main
 .swiper-button-down:hover {
   scale: 1.1;
 }
@@ -128,8 +155,8 @@
     border-radius: 16px;
     background: radial-gradient(
       189.32% 190.93% at 59.76% -23.42%,
-      #4f2ee8 18.03%,
-      #fff 100%
+      var(--violet) 18.03%,
+      var(--white) 100%
     );
     box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
 

@@ -1,31 +1,31 @@
 .dark-theme .books {
-  background-color: #202024;
+  background-color: var(--black-body);
 }
 .shopping-list {
   list-style: none;
   margin-top: 40px;
 }
 .books .shopping-list_title {
-  color: #111;
+  color: var(--black);
   font-family: DM Sans;
   font-size: 32px;
   font-weight: 700;
-  line-height: 118.75%;
+  line-height: 1.18;
   letter-spacing: -1.28px;
 }
 @media (min-width: 768px) {
   .books .shopping-list_title {
     font-size: 48px;
-    line-height: 108%;
+    line-height: 1.08;
     letter-spacing: -1.92px;
   }
 }
 .dark-theme .shopping-list_title {
-  color: #fff;
+  color: var(--white);
 }
 
 .shopping-list_title .violet {
-  color: #4f2ee8;
+  color: var(--violet);
 }
 .block-not-book {
   max-width: 265px;
@@ -59,14 +59,13 @@
   }
   .block-not-book_title {
     max-width: 349px;
-
   }
 }
 .shopping-list_book-item {
   padding: 14px;
   border-radius: 16px;
   border: 2px solid rgba(79, 46, 232, 0.4);
-  background: #fff;
+  background: var(--white);
 
   display: flex;
   justify-content: space-between;
@@ -79,8 +78,8 @@
   }
 }
 .dark-theme .shopping-list_book-item {
-  background-color: #111;
-  color: #fff;
+  background-color: var(--black);
+  color: var(--white);
 }
 
 .shopping-list_book-item:not(:last-child) {
@@ -127,7 +126,7 @@
 }
 
 .shopping-list .book_title {
-  color: #111;
+  color: var(--black);
   font-family: DM Sans;
   font-size: 16px;
   font-weight: 700;
@@ -138,7 +137,7 @@
 }
 .dark-theme .shopping-list .book_title,
 .dark-theme .shopping-list .book_description {
-  color: #fff;
+  color: var(--white);
 }
 
 .shopping-list .book_category {
@@ -163,21 +162,21 @@
   height: 28px;
   padding: 6px;
   border-radius: 50%;
-  background-color: #4f2ee8;
+  background-color: var(--violet);
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
-  transition: background-color .3s linear;
+  transition: background-color 0.3s linear;
 }
-.shopping-list .book_delete-btn:hover{
-  background-color: #EAC645;
+.shopping-list .book_delete-btn:hover {
+  background-color: var(--yellow);
 }
 .shopping-list .book_description {
   height: 68px;
   overflow: hidden;
   /* white-space: nowrap; */
-  color: #111;
+  color: var(--black);
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -191,10 +190,9 @@
   margin-bottom: 14px;
 }
 @media (min-width: 768px) {
-
   .shopping-list .book_description {
-  height: 53px;
-  margin-bottom: 41px;
+    height: 53px;
+    margin-bottom: 41px;
   }
 }
 .shopping-list .book_content {
@@ -222,7 +220,7 @@
 }
 @media (min-width: 456px) {
   .shopping-list .book_author {
-  width: 100%;
+    width: 100%;
   }
 }
 
@@ -242,14 +240,13 @@
 }
 @media (min-width: 768px) {
   .shopping-list .book_buy-links {
-align-items: flex-start;
+    align-items: flex-start;
   }
   .book_buy-links_item a .amazon,
-.book_buy-links_item a .ibook {
-  display: inline-block;
-  vertical-align: middle;
-}
-
+  .book_buy-links_item a .ibook {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 .book_buy-links_item a:hover {
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
@@ -262,79 +259,82 @@ align-items: flex-start;
   filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
 }
 
-
-.pagination{
+.pagination {
   display: none;
   justify-content: center;
   margin-top: 40px;
   gap: 8px;
 }
-.page-btn ,.static-btn{
+.page-btn,
+.static-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #111;
-  border: 1px solid black;
+  color: var(--black);
+  border: 1px solid var(--black);
   font-family: DM Sans;
   font-size: 18px;
   font-weight: 700;
   line-height: 122.22%;
- width: 38px;
- height: 38px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background-color: transparent;
   text-decoration: none;
   cursor: pointer;
-  transition: color .4s linear,border .5s linear,background-color .3s linear;
+  transition: color 0.4s linear, border 0.5s linear,
+    background-color 0.3s linear;
 }
-.static-btn{
-  background-color: #EAC645;
+.static-btn {
+  background-color: var(--yellow);
 }
-.pagination_btn-to-prev{
+.pagination_btn-to-prev {
   margin-right: 6px;
 }
-.pagination_btn-to-next{
+.pagination_btn-to-next {
   margin-left: 6px;
 }
-.pagination_btn-to-start .move{
-margin-right: -15px;
-}
-.pagination_btn-to-end .move{
+.pagination_btn-to-start .move {
   margin-right: -15px;
-  }
+}
+.pagination_btn-to-end .move {
+  margin-right: -15px;
+}
 .page-btn.active {
   border: 1px solid transparent;
-  color: var(--whiteA, #FFF);
-  background-color: #111;
+  color: var(--white);
+  background-color: var(--black);
 }
-.dark-theme .page-btn{
-  border: 1px solid  #FFF;
-  color: #FFF;
+.dark-theme .page-btn {
+  border: 1px solid var(--white);
+  color: var(--white);
 }
 .dark-theme .page-btn.active {
-  background-color: #FFF;
-  color: #111;
-
+  background-color: var(--white);
+  color: var(--black);
 }
 @media (min-width: 768px) {
-  .pagination{
+  .pagination {
     gap: 10px;
   }
-  .page-btn, .static-btn {
+  .page-btn,
+  .static-btn {
     width: 44px;
     height: 44px;
   }
-  .pagination_btn-to-prev{
+  .pagination_btn-to-prev {
     margin-right: 14px;
   }
-  .pagination_btn-to-next{
+  .pagination_btn-to-next {
     margin-left: 14px;
   }
 }
-.static-btn.disabled{
-  background-color: black;
+.static-btn.disabled {
+  background-color: var(--black);
 }
-.static-btn.disabled svg{
-fill: grey;}
-.dark-theme .static-btn.disabled svg{
-  fill: white;}
+.static-btn.disabled svg {
+  fill: grey;
+}
+.dark-theme .static-btn.disabled svg {
+  fill: var(--white);
+}

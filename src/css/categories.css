@@ -17,6 +17,10 @@
   background: #e0e0e0;
   border-radius: 12px;
 }
+.category-books:not(:last-child) {
+  margin-bottom: 40px;
+}
+
 .categories-item {
   color: rgba(17, 17, 17, 0.6);
   cursor: pointer;
@@ -37,18 +41,18 @@
   text-transform: uppercase;
 }
 .dark-theme .categories-item:first-child {
-  color: #eac645;
+  color: var(--yellow);
 }
 
 .categories-item:hover,
 .categories-item:focus,
 .categories-item.active {
-  color: #4f2ee8;
+  color: var(--violet);
 }
 .dark-theme .categories-item:hover,
 .dark-theme .categories-item:focus,
 .dark-theme .categories-item.active {
-  color: #eac645;
+  color: var(--yellow);
 }
 
 @media screen and (min-width: 768px) {
@@ -66,7 +70,7 @@
   }
   .categories-item:hover,
   .categories-item:focus {
-    color: #4f2ee8;
+    color: var(--violet);
   }
 }
 /* як відцентрувати контент по центру  , і при чорній темі як scc написати правильно */
