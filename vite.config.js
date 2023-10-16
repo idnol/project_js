@@ -5,7 +5,7 @@ import FullReload from 'vite-plugin-full-reload';
 
 export default defineConfig({
    define: {
-    global: {},
+    _global: {},
   },
   root: 'src',
   build: {
@@ -15,4 +15,5 @@ export default defineConfig({
     outDir: '../dist',
   },
   plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
+  base: './',
 });

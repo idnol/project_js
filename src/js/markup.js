@@ -69,7 +69,6 @@ async function renderCardModal(idBook) {
           <a class="amazon" href="${book.amazon_product_url}"></a>
           <a class="book" href="${book.buy_links[2].url}"></a>
           </div>
-
           </div>`
 }
 
