@@ -37,8 +37,8 @@
           <h2>${e.title}</h2>
           <p class="author">${e.author}</p>
           <p class="module-description">${e.description}</p>
-          <a class="amazon" href="${e.amazon_product_url}"><img class="amazon-m" src="./src/img/amazon-img-m.png"></a>
-          <a class="book" href=""><img class="book-link-m" src="./src/img/book-image-m.png"></a>
+          <a class="amazon" href="${e.amazon_product_url}"><img class="amazon-m" src="./amazon-img-m.png"></a>
+          <a class="book" href=""><img class="book-link-m" src="img/book-image-m.png"></a>
           </div>`}function mi(t,e){const s=e??"",i=t.map(n=>`  <li class="book-card ${s}" data-id='${n._id}'>
                   <div class="book-action">
                     <img
