@@ -1,4 +1,4 @@
-import{r as i,s as w}from"./header-c7214fc8.js";function h(o){return o.length===0?`<li class="block-not-book">
+import{r as i,s as w}from"./header-04f901f6.js";function h(o){return o.length===0?`<li class="block-not-book">
             <h3 class="block-not-book_title">This page is empty, add some books and proceed to order.</h3>
             <picture class="block-not-book_img">
   <source
