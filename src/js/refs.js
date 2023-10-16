@@ -20,6 +20,7 @@ const refs = {
   toPrevButton :document.querySelector('.pagination_btn-to-prev'),
   toNextButton :document.querySelector('.pagination_btn-to-next'),
   toEndButton :document.querySelector('.pagination_btn-to-end'),
+  supportSwiper: document.querySelector('.mySupportBlockSwiper'),
 };
 
 export { refs };

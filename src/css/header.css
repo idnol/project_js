@@ -1,29 +1,3 @@
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-.link {
-  text-decoration: none;
-}
-
-.list {
-  list-style: none;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .menu {
   display: none;
 }
@@ -36,17 +10,18 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
-  padding: 18px 20px;
-  border-radius: 0px 0px 8px 8px;
-  border: 1.5px solid #111;
-  background: #fff;
+  padding: 18px 0;
+  border-radius: 0 0 8px 8px;
+  border: 1.5px solid var(--black);
+  background: var(--white);
 }
 
 .header-container {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .header-nav {
@@ -90,7 +65,7 @@ ul {
 }
 
 .switch-input:checked + .switch::before {
-  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+  background: linear-gradient(180deg, var(--violet) 0%, #686868 100%);
 }
 
 .switch {
@@ -107,7 +82,7 @@ ul {
   width: 40px;
   height: 20px;
   border-radius: 50px;
-  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+  background: linear-gradient(180deg, var(--violet) 0%, #dcdcdc 100%);
   transition-duration: 250ms;
 }
 
@@ -119,7 +94,7 @@ ul {
   width: 18px;
   height: 18px;
   border-radius: 50px;
-  background-color: #fff;
+  background-color: var(--white);
   transition-duration: 250ms;
 }
 
@@ -135,12 +110,12 @@ ul {
 .icon-burger {
   width: 28px;
   height: 28px;
-  stroke: #111111;
+  stroke: var(--black);
 }
 
 .icon-burger:hover,
 .icon-burger:focus {
-  stroke: #4f2ee8;
+  stroke: var(--violet);
 }
 
 /** ------------------ MOB-MENU ------------------ **/
@@ -162,16 +137,16 @@ ul {
 .icon-munu-close {
   width: 28px;
   height: 28px;
-  stroke: #111111;
+  stroke: var(--black);
 }
 
 .icon-munu-close:hover,
 .icon-munu-close:focus {
-  stroke: #4f2ee8;
+  stroke: var(--violet);
 }
 
 .mob-menu {
-  /* z-index: -2; */
+  z-index: 2;
   position: fixed;
   overflow-y: scroll;
   top: 0;
@@ -187,8 +162,8 @@ ul {
   background: url(../img/Group-books.png),
     radial-gradient(
       189.32% 190.93% at 59.76% -23.42%,
-      #4f2ee8 18.03%,
-      #fff 100%
+      var(--violet) 18.03%,
+      var(--white) 100%
     );
   background-repeat: no-repeat;
   background-position: bottom;
@@ -223,7 +198,7 @@ ul {
 
 .mob-nav-link {
   position: relative;
-  color: #fff;
+  color: var(--white);
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -237,22 +212,22 @@ ul {
 .shoplist-icon {
   width: 20px;
   height: 20px;
-  fill: #fff;
+  fill: var(--white);
   margin-left: 4px;
 }
 
 li a.current-page {
   font-weight: 700;
-  background-color: #eac645;
+  background-color: var(--yellow);
 
   border-radius: 36px;
   display: flex;
   padding: 8px 16px;
-  color: #111111;
+  color: var(--black);
 }
 
 a.current-page .shoplist-icon {
-  fill: #111111;
+  fill: var(--black);
 }
 
 .login {
@@ -262,9 +237,9 @@ a.current-page .shoplist-icon {
   width: 118px;
   height: 48px;
   border-radius: 18px;
-  border: 1.5px solid #111;
+  border: 1.5px solid var(--black);
 
-  background: #fff;
+  background: var(--white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -273,7 +248,7 @@ a.current-page .shoplist-icon {
 .icon-login {
   width: 20px;
   height: 20px;
-  stroke: #eac645;
+  stroke: var(--yellow);
   margin-left: 4px;
 }
 
@@ -283,7 +258,7 @@ a.current-page .shoplist-icon {
   left: 20px;
   width: 37px;
   height: 37px;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 50%;
 }
 
@@ -312,7 +287,7 @@ a.current-page .shoplist-icon {
 
   .header-nav-link {
     position: relative;
-    color: #111;
+    color: var(--black);
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -326,13 +301,13 @@ a.current-page .shoplist-icon {
   .shoplist-icon {
     width: 20px;
     height: 20px;
-    fill: #111111;
+    fill: var(--black);
     margin-left: 8px;
   }
 
   li a.current-page {
     font-weight: 700;
-    background-color: #eac645;
+    background-color: var(--yellow);
     border-radius: 36px;
     display: flex;
     padding: 8px 16px;
@@ -354,7 +329,7 @@ a.current-page .shoplist-icon {
     cursor: pointer;
     border: none;
     border-radius: 36px;
-    background-color: #4f2ee8;
+    background-color: var(--violet);
   }
 }
 
@@ -376,31 +351,31 @@ a.current-page .shoplist-icon {
 /* dark theme */
 
 .dark-theme {
-  background-color: #202024;
+  background-color: var(--black-body);
 }
 
 .dark-theme .page-header {
-  background: #111;
-  color: #fff;
+  background: var(--black);
+  color: var(--white);
 }
 
 .dark-theme .logo-icon-name {
-  fill: #fff;
+  fill: var(--white);
 }
 
 .dark-theme .icon-burger,
 .dark-theme .icon-munu-close {
-  stroke: #fff;
+  stroke: var(--white);
 }
 
 .dark-theme .header-nav-link {
-  color: #fff;
+  color: var(--white);
 }
 
 .dark-theme .header-nav-link.current-page {
-  color: #111;
+  color: var(--black);
 }
 
 .dark-theme .shoplist-icon {
-  fill: #fff;
+  fill: var(--white);
 }

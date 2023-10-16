@@ -1,5 +1,5 @@
 .books-title {
-  color: #111111;
+  color: var(--black);
   font-family: DM Sans, sans-serif;
   font-size: 32px;
   font-weight: 700;
@@ -8,7 +8,11 @@
   margin-bottom: 40px;
 }
 .books-title span {
-  color: #4f2ee8;
+  color: var(--violet);
+}
+
+.dark-theme .books-title {
+  color: var(--white);
 }
 
 .category-name {
@@ -23,15 +27,9 @@
   margin-bottom: 18px;
 }
 
-/* .book-list {
-  display: flex;
-  gap: 25px;
-  margin-bottom: 8px;
-} */
-
 .category-button {
   display: block;
-  color: #111111;
+  color: var(--black);
   font-size: 14px;
   font-weight: 700;
   line-height: 1.28;
@@ -40,21 +38,31 @@
   padding: 14px 28px;
   background: #f6f6f6;
   border-radius: 40px;
-  border: 2px solid #4f2ee8;
+  border: 2px solid var(--violet);
   cursor: pointer;
   margin-top: 8px;
   margin-left: auto;
   transition: 250ms ease;
 }
 
+.dark-theme .category-button {
+  color: var(--white);
+  background: var(--black-body);
+}
+
 .category-button:hover,
 .category-button:focus {
-  border-color: #111111;
-  background: #4f2ee8;
-  color: #ffffff;
+  border-color: var(--black);
+  background: var(--violet);
+  color: var(--white);
 }
 .swiper.mySwiper {
   z-index: 0;
+}
+
+.dark-theme .category-button {
+  background-color: transparent;
+  color: var(--white);
 }
 
 @media screen and (min-width: 768px) {
