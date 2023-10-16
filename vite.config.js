@@ -15,4 +15,5 @@ export default defineConfig({
     outDir: '../dist',
   },
   plugins: [injectHTML(), FullReload(['./src/**/**.html'])],
+  base: './',
 });
