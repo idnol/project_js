@@ -2,34 +2,389 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookshelf basket</title>
     
-    <script type="module" crossorigin src="/project_js/assets/styles-87f6a4ce.js"></script>
-    <link rel="stylesheet" href="/project_js/assets/styles-6709de9d.css">
+    <script type="module" crossorigin src="/project_js/assets/basket-2703cc66.js"></script>
+    <link rel="modulepreload" crossorigin href="/project_js/assets/header-4f3d4679.js">
+    <link rel="stylesheet" href="/project_js/assets/header-d07759de.css">
   </head>
   <body>
-    
+    <header class="page-header">
+  <div class='container'>
+    <div class='row'>
+      <div class="header-container">
+
+        <div class="header-logo">
+          <nav class="header-nav">
+            <a href="/" class="header-logo-link link">
+              <svg class="logo-icon">
+                <use href="../img/symbol-defs.svg#icon-logo"></use>
+              </svg>
+              <svg class="logo-icon-name logo-icon-name-js">
+                <use href="../img/symbol-defs.svg#icon-Bookshelf"></use>
+              </svg>
+            </a>
+
+            <ul class="menu list">
+              <li class="menu-item">
+                <a href="/" class="header-nav-link link current-page nav-js-home">Home</a>
+              </li>
+              <li class="menu-item">
+                <a href="/basket.html" class="header-nav-link link nav-js-shipping">Shopping list
+                  <svg class="shoplist-icon shoplist-icon-js">
+                    <use href="../img/symbol-defs.svg#icon-uil_cart"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-mob-menu">
+          <div class="switch-theme">
+            <input
+              class="switch-input visually-hidden"
+              type="checkbox"
+              name="theme"
+              value="check-theme"
+              id="theme">
+            <label for="theme" id="switch" class="switch"></label>
+          </div>
+          <!-- Sign up -->
+          <button type="button" class="btn-sign-up"></button>
+
+          <!-- mob-menu -->
+          <button type="button" class="menu-open-btn js-open-menu ">
+            <svg class="icon-burger icon-burger-js">
+              <use href="../img/symbol-defs.svg#icon-align-left"></use>
+            </svg>
+          </button>
+
+          <button type="button" class="menu-close-btn js-close-menu visually-hidden">
+            <svg class="icon-munu-close icon-munu-close-js">
+              <use href="../img/symbol-defs.svg#icon-x-close"></use>
+            </svg>
+          </button>
+        </div>
+    </div>
+  </div>
+
+</header>
+
+
+
+
 
     <main>
       <section>
-        <div class='container'>
-          <div class='row'>
-            <div class='sidebar'>
-              <div class='slider-wrapper'>
-  <div class='slider'></div>
-</div>
+        <div class="container">
+          <div class="row">
+            <div class="sidebar">
+              <div class="slider-wrapper">
+  <div class="slider mySupportBlockSwiper">
+    <div class="slider-title-container">
+      <h2 class="swiper-title">Support Ukraine</h2>
+      <img src="../img/national-emblem.svg" alt="Ukraine emblem" />
+    </div>
+    <div class='support-swiper-wrapper'>
+      <div class="swiper support-swiper">
+        <div class="swiper-list swiper-wrapper">
+          <div class="list-item swiper-slide">
+            <div class="list-item-flex">
+              <p class="list-item-number">01</p>
+              <div class='img-wrapper'>
+                <picture>
+                  <source
+                    srcset="
+                      ../img/support-ukraine/block-01-1x.png 1x,
+                      ../img/support-ukraine/block-01-2x.png 2x
+                    "
+                    media="(min-width: 320px)"
+                    width="129"
+                  />
+                  <img
+                    class="list-item-image"
+                    src="../img/support-ukraine/block-01-1x.png"
+                    alt="Save the Children"
+                    width="129"
+
+                /></picture>
+              </div>
             </div>
-            <div class='books'>
-              
+          </div>
+          <div class="list-item swiper-slide">
+            <div class="list-item-flex">
+              <p class="list-item-number">02</p>
+              <div class='img-wrapper'>
+              <picture>
+                <source
+                  srcset="
+                    ../img/support-ukraine/block-02-1x.png 1x,
+                    ../img/support-ukraine/block-02-2x.png 2x
+                  "
+                  media="(min-width: 320px)"
+                  width="62"
+                   />
+                <img
+                  class="list-item-image"
+                  src="../img/support-ukraine/block-02-1x.png"
+                  alt="Save the Children"
+                  width="62"
+
+              /></picture>
+            </div>
+            </div>
+          </div>
+          <div class="list-item swiper-slide">
+            <div class="list-item-flex">
+              <p class="list-item-number">03</p>
+              <div class='img-wrapper'>
+              <picture>
+                <source
+                  srcset="
+                    ../img/support-ukraine/block-03-1x.png 1x,
+                    ../img/support-ukraine/block-03-2x.png 2x
+                  "
+                  media="(min-width: 320px)"
+                  width="101"
+                   />
+                <img
+                  class="list-item-image"
+                  src="../img/support-ukraine/block-03-1x.png"
+                  alt="Save the Children"
+                  width="101"
+
+              /></picture>
+            </div>
+            </div>
+          </div>
+          <div class="list-item swiper-slide">
+            <div class="list-item-flex">
+              <p class="list-item-number">04</p>
+              <div class='img-wrapper'>
+              <picture>
+                <source
+                  srcset="
+                    ../img/support-ukraine/block-04-1x.png 1x,
+                    ../img/support-ukraine/block-04-2x.png 2x
+                  "
+                  media="(min-width: 320px)"
+                  width="82"
+                   />
+                <img
+                  class="list-item-image"
+                  src="../img/support-ukraine/block-04-1x.png"
+                  alt="Save the Children"
+                  width="82"
+
+              /></picture>
+            </div>
+            </div>
+          </div>
+          <div class="list-item swiper-slide">
+            <div class="list-item-flex">
+              <p class="list-item-number">05</p>
+              <div class='img-wrapper'>
+              <picture>
+                <source
+                  srcset="
+                    ../img/support-ukraine/block-05-1x.png 1x,
+                    ../img/support-ukraine/block-05-2x.png 2x
+                  "
+                  media="(min-width: 320px)"
+                  width="55"
+                   />
+                <img
+                  class="list-item-image"
+                  src="../img/support-ukraine/block-05-1x.png"
+                  alt="Save the Children"
+                  width="55"
+
+              /></picture>
+            </div>
+            </div>
+          </div>
+          <div class="list-item swiper-slide">
+            <div class="list-item-flex">
+              <p class="list-item-number">06</p>
+              <div class='img-wrapper'>
+              <picture>
+                <source
+                  srcset="
+                    ../img/support-ukraine/block-06-1x.png 1x,
+                    ../img/support-ukraine/block-06-2x.png 2x
+                  "
+                  media="(min-width: 320px)"
+                  width="115"
+                   />
+                <img
+                  class="list-item-image"
+                  src="../img/support-ukraine/block-06-1x.png"
+                  alt="Save the Children"
+                  width="115"
+
+              /></picture>
+            </div>
+            </div>
+          </div>
+          <div class="list-item swiper-slide">
+            <div class="list-item-flex">
+              <p class="list-item-number">07</p>
+              <div class='img-wrapper'>
+              <picture>
+                <source
+                  srcset="
+                    ../img/support-ukraine/block-07-1x.png 1x,
+                    ../img/support-ukraine/block-07-2x.png 2x
+                  "
+                  media="(min-width: 320px)"
+                  width="102"
+                   />
+                <img
+                  class="list-item-image"
+                  src="../img/support-ukraine/block-07-1x.png"
+                  alt="Save the Children"
+                  width="102"
+
+              /></picture>
+            </div>
+            </div>
+          </div>
+          <div class="list-item swiper-slide">
+            <div class="list-item-flex">
+              <p class="list-item-number">08</p>
+              <div class='img-wrapper'>
+              <picture>
+                <source
+                  srcset="
+                    ../img/support-ukraine/block-08-1x.png 1x,
+                    ../img/support-ukraine/block-08-2x.png 2x
+                  "
+                  media="(min-width: 320px)"
+                  width="81"
+                   />
+                <img
+                  class="list-item-image"
+                  src="../img/support-ukraine/block-08-1x.png"
+                  alt="Save the Children"
+                  width="81"
+
+              /></picture>
+            </div>
+            </div>
+          </div>
+          <div class="list-item swiper-slide">
+            <div class="list-item-flex">
+              <p class="list-item-number">09</p>
+              <div class='img-wrapper'>
+              <picture>
+                <source
+                  srcset="
+                    ../img/support-ukraine/block-09-1x.png 1x,
+                    ../img/support-ukraine/block-09-2x.png 2x
+                  "
+                  media="(min-width: 320px)"
+                  width="114"
+                   />
+                <img
+                  class="list-item-image"
+                  src="../img/support-ukraine/block-09-1x.png"
+                  alt="Save the Children"
+                  width="114"
+
+              /></picture>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-button-down swiper-button">
+    <img src="../img/arrow-down-icon-support-button.svg" alt="down" width="20px" height="20px" />
+  </div>
+  <div class="swiper-button-up swiper-button">
+    <img src="../img/arrow-down-icon-support-button.svg" alt="down" width="20px" height="20px" />
+  </div>
+</div>
+
+
+            </div>
+            <div class="books">
+              <div class="books_container">
+  <h1 class="shopping-list_title">Shopping <span class="violet">List</span></h1>
+  <ul class="shopping-list"></ul>
+  <div class="pagination">
+    <span class="pagination_btn-to-start static-btn  disabled ">
+      <svg class="move"  height="22" width="22">
+        <use xlink:href="../img/symbol-defs.svg#icon-arrow-left" />
+    </svg >
+      <svg height="22" width="22">
+      <use xlink:href="../img/symbol-defs.svg#icon-arrow-left" />
+    </svg>
+
+</span>
+<span class="pagination_btn-to-prev disabled static-btn" >
+  <svg height="22" width="22">
+    <use xlink:href="../img/symbol-defs.svg#icon-arrow-left" />
+</svg>
+</span>
+
+<span class="pagination_btn-to-next disabled  static-btn">
+  <svg height="22" width="22">
+  <use xlink:href="../img/symbol-defs.svg#icon-arrow-right" />
+</svg>
+</span>
+<span class="pagination_btn-to-end disabled  static-btn">
+  <svg class="move"  height="22" width="22">
+    <use xlink:href="../img/symbol-defs.svg#icon-arrow-right" />
+  </svg>
+  <svg  height="22" width="22">
+    <use xlink:href="../img/symbol-defs.svg#icon-arrow-right" />
+  </svg>
+</span>
+  </div>
+</div>
+
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <div class='js-modal'></div>
+    <div class='js-modal hidden backdrop'>
+  <button class="module-close-btn" type="button">
+      <img class="module-vector" src="../img/x-close.png-min.png" alt="">
+  </button>
+  <div class="block-modal-info js-modal-info"></div>
+   <button class="btn-module-add" type="button"><p class="add">ADD TO SHOPPING LIST</p></button>
+</div>
+    <!-- mob-menu -->      
+    <div class="mob-menu js-mob-menu " >
+      <div class="photo-user"></div>
+      <ul class="mob-menu-list js-mob-list list">
+        <li class="mob-menu-item">
+          <a href="/" class="mob-nav-link link current-page">Home</a>
+        </li>
+        <li class="mob-menu-item">
+          <a href="/basket.html" class="mob-nav-link link">Shopping list
+            <svg class="shoplist-icon">
+              <use href="../img/symbol-defs.svg#icon-uil_cart"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <button type="button" class="login">Log out
+        <svg class="icon-login">
+          <use href="../img/symbol-defs.svg#icon-arrow-narrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- mob-menu -->
     
   </body>
 </html>
