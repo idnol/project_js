@@ -65,8 +65,11 @@ async function renderCardModal(idBook) {
           <h2>${book.title}</h2>
           <p class="author">${book.author}</p>
           <p class="module-description">${book.description}</p>
-          <a class="amazon" href="${book.amazon_product_url}"><img class="amazon-m" src="../img/amazon-img-m.png"></a>
-          <a class="book" href=""><img class="book-link-m" src="../img/book-image-m.png"></a>
+          <div class='buttons-wrapper'>
+          <a class="amazon" href="${book.amazon_product_url}"></a>
+          <a class="book" href="${book.buy_links[2].url}"></a>
+          </div>
+
           </div>`
 }
 
