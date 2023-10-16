@@ -2,27 +2,7 @@ function createBookFromSLocalStorageMarkup(arr) {
   if (arr.length === 0) {
     return `<li class="block-not-book">
             <h3 class="block-not-book_title">This page is empty, add some books and proceed to order.</h3>
-            <picture class="block-not-book_img">
-  <source
-    srcset="
-      ../img/bg.png 1x,
-      ../img/bg@2x.png 2x
-    "
-    media="(min-width: 768px)"
-    width="322"
-    height="241"
-  />
-            <source
-              srcset="
-                ../img/shopping-list.bg.png 1x,
-                ../img/shopping-list.bg@2x.png 2x
-              "
-              media="(max-width: 767px)"
-              width="265"
-              height="172"
-            />
-  <img src="../img/shopping-list.bg.png" alt="books not found" width="265" />
-</picture>
+            <div class='img'></div>
         </li>`;
   } else {
     return arr
