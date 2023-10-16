@@ -32,14 +32,14 @@
                 </ul>
               </div>
               <button class="category-button js-category-button" type="button" data-name="${i}">see more</button>
-          </ul>`}).join("");di(e)}async function pi(t){const e=await t;return`<img class="modal-book-image" src="${e.book_image}">
+          </ul>`}).join("");di(e)}async function pi(t){const e=await t,s=e.buy_links.find(i=>i.name==="Apple Books");return`<img class="modal-book-image" src="${e.book_image}">
           <div class="block-info">
           <h2>${e.title}</h2>
           <p class="author">${e.author}</p>
           <p class="module-description">${e.description}</p>
           <div class='buttons-wrapper'>
           <a class="amazon" href="${e.amazon_product_url}"></a>
-          <a class="book" href="${e.buy_links[2].url}"></a>
+          <a class="book" href="${s.url}"></a>
           </div>
           </div>`}function mi(t,e){const s=e??"",i=t.map(n=>`  <li class="book-card ${s}" data-id='${n._id}'>
                   <div class="book-action">
