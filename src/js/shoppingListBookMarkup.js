@@ -5,8 +5,8 @@ function createBookFromSLocalStorageMarkup(arr) {
             <picture class="block-not-book_img">
   <source
     srcset="
-      ../img/bg.png 1x,
-      ../img/bg@2x.png 2x
+      ./img/bg.png 1x,
+      ./img/bg@2x.png 2x
     "
     media="(min-width: 768px)"
     width="322"
@@ -14,14 +14,14 @@ function createBookFromSLocalStorageMarkup(arr) {
   />
             <source
               srcset="
-                ../img/shopping-list.bg.png 1x,
-                ../img/shopping-list.bg@2x.png 2x
+                ./img/shopping-list.bg.png 1x,
+                ./img/shopping-list.bg@2x.png 2x
               "
               media="(max-width: 767px)"
               width="265"
               height="172"
             />
-  <img src="../img/shopping-list.bg.png" alt="books not found" width="265" />
+  <img src="./img/shopping-list.bg.png" alt="books not found" width="265" />
 </picture>
         </li>`;
   } else {
@@ -56,8 +56,8 @@ function createBookFromSLocalStorageMarkup(arr) {
                         <a target="_blank" href="${link.url}">
                             ${
                               link.name === 'Amazon'
-                                ? '<img class="book_buy-links-svg amazon" src="../img/amazon.png" />'
-                                : '<img class="book_buy-links-svg ibook" src="../img/ibook.png" />'
+                                ? '<img class="book_buy-links-svg amazon" src="./img/amazon.png" />'
+                                : '<img class="book_buy-links-svg ibook" src="./img/ibook.png" />'
                             }
                         </a>
                     </li>
