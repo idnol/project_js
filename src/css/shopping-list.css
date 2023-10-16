@@ -239,9 +239,6 @@
   filter: grayscale(100%);
 }
 @media (min-width: 768px) {
-  .shopping-list .book_buy-links {
-    align-items: flex-start;
-  }
   .book_buy-links_item a .amazon,
   .book_buy-links_item a .ibook {
     display: inline-block;
