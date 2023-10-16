@@ -1,10 +1,10 @@
-import{r as i,s as w}from"./header-4f3d4679.js";function h(o){return o.length===0?`<li class="block-not-book">
+import{r as i,s as w}from"./header-9f3a9167.js";function h(o){return o.length===0?`<li class="block-not-book">
             <h3 class="block-not-book_title">This page is empty, add some books and proceed to order.</h3>
             <picture class="block-not-book_img">
   <source
     srcset="
-      ../img/bg.png 1x,
-      ../img/bg@2x.png 2x
+      ./img/bg.png 1x,
+      ./img/bg@2x.png 2x
     "
     media="(min-width: 768px)"
     width="322"
@@ -12,14 +12,14 @@ import{r as i,s as w}from"./header-4f3d4679.js";function h(o){return o.length===
   />
             <source
               srcset="
-                ../img/shopping-list.bg.png 1x,
-                ../img/shopping-list.bg@2x.png 2x
+                ./img/shopping-list.bg.png 1x,
+                ./img/shopping-list.bg@2x.png 2x
               "
               media="(max-width: 767px)"
               width="265"
               height="172"
             />
-  <img src="../img/shopping-list.bg.png" alt="books not found" width="265" />
+  <img src="./img/shopping-list.bg.png" alt="books not found" width="265" />
 </picture>
         </li>`:o.map(t=>`<li class="shopping-list_book-item book">
          <div class="book_image-block">   <img class="book_image" src="${t.book_image}"/></div>
@@ -39,7 +39,7 @@ import{r as i,s as w}from"./header-4f3d4679.js";function h(o){return o.length===
              ${t.buy_links.slice(0,2).map(e=>`
             <li class="book_buy-links_item">
                         <a target="_blank" href="${e.url}">
-                            ${e.name==="Amazon"?'<img class="book_buy-links-svg amazon" src="../img/amazon.png" />':'<img class="book_buy-links-svg ibook" src="../img/ibook.png" />'}
+                            ${e.name==="Amazon"?'<img class="book_buy-links-svg amazon" src="./img/amazon.png" />':'<img class="book_buy-links-svg ibook" src="./img/ibook.png" />'}
                         </a>
                     </li>
                 `).join("")}</ul>
