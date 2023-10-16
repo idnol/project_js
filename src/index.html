@@ -5,11 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bookshelf</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="stylesheet" href="./assets/spin.css" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body onload="toggleT()">
+  <body>
     <load ="partials/header.html" />
 
     <main>
@@ -37,15 +36,6 @@
     </footer>
     <script type="module" src="./assets/spin.js"></script>
     <script type="module" src="/main.js"></script>
-    <script>
-      function toggleT() {
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme === 'dark-theme') {
-          document.body.classList.add('dark-theme');
-        }
-      }
-    </script>
-
   </body>
 </html>
 

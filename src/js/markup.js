@@ -31,10 +31,9 @@ function createMarkup(apiResponse) {
                       alt="${title}"
                       loading="lazy"
                     />
-                    <div class="book-overlay">
+                    <div class="book-card-overlay">
                       <p class="overlay-text">quick view</p>
                     </div>
-                    ;
                   </div>
                   <div class="info">
                     <p class="book-title">${title}</p>
@@ -88,7 +87,6 @@ function renderBookCard(data, className) {
                     <div class="book-card-overlay">
                       <p class="overlay-text">quick view</p>
                     </div>
-                    ;
                   </div>
                   <div class="info">
                     <p class="book-title">${card.title}</p>
