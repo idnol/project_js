@@ -29,6 +29,8 @@ function matchMedia(event) {
 
 let currentURL = window.location.href;
 let links = document.getElementsByTagName('a');
+const liHome = document.querySelector('.js-menu-item-home');
+const liShop = document.querySelector('.js-menu-item-shop');
 
 for (let link of links) {
   if (link.href === currentURL) {
@@ -37,6 +39,18 @@ for (let link of links) {
     link.classList.remove('current-page');
   }
 }
+
+// let currentPath = window.location.pathname;
+// let links = document.getElementsByTagName('a');
+
+// for (let i = 0; i < links.length; i++) {
+//   console.log(i);
+//   if (links[i].pathname === currentPath) {
+//     links[i].parentNode.classList.add('current');
+//   } else {
+//     links[i].parentNode.classList.remove('current');
+//   }
+// }
 
 // dark theme
 
