@@ -1,7 +1,7 @@
 import { getBook } from './api.js';
 import { refs } from './refs.js';
 import { renderCardModal } from './markup.js';
-import {onModalBtnAddClick} from './handlers.js'
+import { onModalBtnAddClick } from './handlers.js';
 
 async function addToBasket(e, target) {
   const book = await getBook(target.dataset.id);
@@ -50,4 +50,4 @@ function setupAdd() {
   refs.modalBtnAdd.classList.remove('remove');
 }
 
-export {addToBasket, onModalBtnAddClick, setStorage, removeItemFromStorage}
+export { addToBasket, onModalBtnAddClick, setStorage, removeItemFromStorage };
