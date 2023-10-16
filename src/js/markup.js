@@ -46,9 +46,9 @@ function createMarkup(apiResponse) {
       return `<ul class="category-books">
               <h2 class="category-name">${list_name}</h2>
               <div class="books-gallery list swiper mySwiper">
-              <ul class="swiper-wrapper">
+                <ul class="swiper-wrapper">
                   ${bookList}
-                  </ul>
+                </ul>
               </div>
               <button class="category-button js-category-button" type="button" data-name="${list_name}">see more</button>
           </ul>`;
