@@ -146,14 +146,14 @@
   display: block;
   width: 62px;
   height: 19px;
-  background: url("../img/amazon-img-m.png");
+  background: url("./img/amazon-img-m.png");
 }
 
 .block-modal-info .book {
   display: block;
   width: 33px;
   height: 32px;
-  background: url("../img/book-image-m.png");
+  background: url("./img/book-image-m.png");
 }
 
 @media screen and (max-width: 427px) {
