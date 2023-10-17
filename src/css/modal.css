@@ -68,14 +68,14 @@
   background-color: #fff;
   z-index: 2;
 }
-.modal-book-image{
+.modal-book-image {
   width: 287px;
   height: 408px;
   border-radius: 8px;
   margin-bottom: 14px;
 }
 
-.block-info h2{
+.block-info h2 {
   color: #111;
   font-family: DM Sans;
   font-size: 16px;
@@ -86,7 +86,7 @@
   margin-bottom: 4px;
 }
 .author {
-  color: #B4AFAF;
+  color: #b4afaf;
   font-family: DM Sans;
   font-size: 12px;
   font-style: italic;
@@ -139,50 +139,51 @@
   letter-spacing: -0.14px;
   text-transform: uppercase;
   border-radius: 40px;
-  border: 2px solid #4F2EE8;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid #4f2ee8;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-module-add:hover,
-.btn-module-add:focus{
+.btn-module-add:focus {
   color: white;
-  background-color: #4F2EE8;
+  background-color: #4f2ee8;
   box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.15);
-
 }
-.modal-links{
+.modal-links {
   gap: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.block-modal-info{
+.block-modal-info {
   margin-bottom: 44px;
-
 }
-.modal-text-info.hidden{
+.modal-text-info.hidden {
   display: none;
 }
-.block-modal-info .buttons-wrapper {
+.block-modal-info .link-wrapper {
   display: flex;
   gap: 20px;
   align-items: center;
 }
-.block-modal-info .amazon, .book_buy-links_item .amazon {
+.block-modal-info .amazon,
+.book_buy-links_item .amazon {
   display: block;
   width: 62px;
   height: 19px;
-  background: url("../img/amazon-img-m.png");
+  background: url('../img/amazon-img-m.png');
 }
 
-.block-modal-info .book, .book_buy-links_item .book {
+.block-modal-info .book,
+.book_buy-links_item .book {
   display: block;
   width: 33px;
   height: 32px;
-  background: url("../img/book-image-m.png");
+  background: url('../img/book-image-m.png');
 }
 
-.modal-text-info{
-  color: rgba(17, 17, 17, 0.50);
+.modal-text-info {
+  color: rgba(17, 17, 17, 0.5);
   text-align: center;
   font-family: DM Sans;
   font-size: 10px;
@@ -201,11 +202,11 @@
     align-items: flex-start;
     padding: 40px;
   }
-  .block-modal-info{
+  .block-modal-info {
     display: flex;
     gap: 24px;
   }
-  .modal-book-image{
+  .modal-book-image {
     width: 192px;
     height: 281px;
     flex-shrink: 0;
@@ -213,11 +214,11 @@
   .block-modal-info {
     margin-bottom: 40px;
   }
-  .btn-module-add{
+  .btn-module-add {
     max-width: 499px;
     width: 100%;
   }
-  .modal-text-info{
+  .modal-text-info {
     font-size: 12px;
     line-height: 1.16;
     letter-spacing: -0.48px;
