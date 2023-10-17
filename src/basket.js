@@ -2,7 +2,15 @@ import { createBookFromSLocalStorageMarkup } from './js/shoppingListBookMarkup.j
 import { refs, toggleMenu, matchMedia } from './js/header';
 import { getBooksFromLocalStorage } from './js/getBooksFromLocalStorage.js';
 import { updatePagination,updateStaticButtons} from './js/updatePagination.js';
-import { handlePageButtonClick, handlerEnd, handlerStart, handlerPrev, handlerNext, handlerDelete } from './js/paginationHandlers.js';
+import {
+  handlePageButtonClick,
+  handlerEnd,
+  handlerStart,
+  handlerPrev,
+  handlerNext,
+  handlerDelete,
+  removeNextDisabled,
+} from './js/paginationHandlers.js';
 import { supportListSlider } from './js/slider';
 
 supportListSlider();
@@ -20,6 +28,7 @@ if (currentPage > 1) {
 }
 if (totalPages > 0) {
   refs.pagination.style.display = 'flex';
+  removeNextDisabled();
 }
 
 let bookToDisplay = getBooksFromLocalStorage(refs.KEY_BOOK, currentPage, refs.booksPerPage);

@@ -31,10 +31,9 @@ function createMarkup(apiResponse) {
                       alt="${title}"
                       loading="lazy"
                     />
-                    <div class="book-overlay">
+                    <div class="book-card-overlay">
                       <p class="overlay-text">quick view</p>
                     </div>
-                    ;
                   </div>
                   <div class="info">
                     <p class="book-title">${title}</p>
@@ -46,9 +45,9 @@ function createMarkup(apiResponse) {
       return `<ul class="category-books">
               <h2 class="category-name">${list_name}</h2>
               <div class="books-gallery list swiper mySwiper">
-              <ul class="swiper-wrapper">
+                <ul class="swiper-wrapper">
                   ${bookList}
-                  </ul>
+                </ul>
               </div>
               <button class="category-button js-category-button" type="button" data-name="${list_name}">see more</button>
           </ul>`;
@@ -59,15 +58,18 @@ function createMarkup(apiResponse) {
 
 async function renderCardModal(idBook) {
   const book = await idBook;
+  const apple = book.buy_links.find(item => item.name === 'Apple Books')
 
   return  `<img class="modal-book-image" src="${book.book_image}">
           <div class="block-info">
           <h2>${book.title}</h2>
           <p class="author">${book.author}</p>
           <p class="module-description">${book.description}</p>
-          <div class="modal-links">
-          <a class="amazon" href="${book.amazon_product_url}"><img class="amazon-m" src="../img/amazon-img-m.png"></a>
-          <a class="book" href=""><img class="book-link-m" src="../img/book-image-m.png"></a>
+
+          <div class='link-wrapper'>
+          <a class="amazon" href="${book.amazon_product_url}"></a>
+          <a class="book" href="${apple.url}"></a>
+
           </div>
           </div>`
 }
@@ -87,7 +89,6 @@ function renderBookCard(data, className) {
                     <div class="book-card-overlay">
                       <p class="overlay-text">quick view</p>
                     </div>
-                    ;
                   </div>
                   <div class="info">
                     <p class="book-title">${card.title}</p>

@@ -4,21 +4,21 @@ const toNextButton = document.querySelector('.pagination_btn-to-next');
 const toEndButton = document.querySelector('.pagination_btn-to-end');
 
 function updateStaticButtons(currentPage, totalPages) {
-    if (currentPage === 1) {
-      toStartButton.classList.add('disabled');
-      toPrevButton.classList.add('disabled');
-    } else {
-      toStartButton.classList.remove('disabled');
-      toPrevButton.classList.remove('disabled');
-    }
-
-    if (currentPage === totalPages) {
-      toNextButton.classList.add('disabled');
-      toEndButton.classList.add('disabled');
-    } else {
-      toNextButton.classList.remove('disabled');
-      toEndButton.classList.remove('disabled');
-    }
+    // if (currentPage === 1) {
+    //   toStartButton.classList.add('disabled');
+    //   toPrevButton.classList.add('disabled');
+    // } else {
+    //   toStartButton.classList.remove('disabled');
+    //   toPrevButton.classList.remove('disabled');
+    // }
+    //
+    // if (currentPage === totalPages) {
+    //   toNextButton.classList.add('disabled');
+    //   toEndButton.classList.add('disabled');
+    // } else {
+    //   toNextButton.classList.remove('disabled');
+    //   toEndButton.classList.remove('disabled');
+    // }
   }
 
 
