@@ -22,8 +22,8 @@ const refs = {
   toNextButton :document.querySelector('.pagination_btn-to-next'),
   toEndButton :document.querySelector('.pagination_btn-to-end'),
   supportSwiper: document.querySelector('.mySupportBlockSwiper'),
-  booksPerPage: 3,
-
+  modalTextInfo: document.querySelector('.modal-text-info'),
+  booksPerPage: 3
 };
 
 export { refs };
