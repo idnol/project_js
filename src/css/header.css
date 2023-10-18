@@ -376,6 +376,7 @@ a.current-page .shoplist-icon {
 .dark-theme .page-header {
   background: var(--black);
   color: var(--white);
+  border: 1.5px solid var(--white);
 }
 
 .dark-theme .logo-icon-name {
