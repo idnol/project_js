@@ -1,5 +1,3 @@
-const booksCategoryTitle = document.querySelector('.books-category-title');
-
 function wrapLastWordTitle(categoryTitle) {
   const titleWords = categoryTitle.trim().split(' ');
   const lastTitleWord = titleWords[titleWords.length - 1];

@@ -1,5 +1,8 @@
 import { Swiper } from 'swiper/core';
+import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 function sliderBook() {
   const swiper = new Swiper('.mySwiper', {
@@ -19,10 +22,11 @@ function sliderBook() {
 }
 
 function supportListSlider() {
-  const swiper = new Swiper('.support-swiper', {
-    slidesPerView: 6,
+  const homeSlider = new Swiper('.support-swiper', {
+    modules: [Navigation, Pagination],
+    slidesPerView: 7,
     spaceBetween: 20,
-    direction: 'vertical',
+    direction: "vertical",
     navigation: {
       nextEl: '.swiper-button-down',
       prevEl: '.swiper-button-up',

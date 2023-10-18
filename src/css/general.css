@@ -18,6 +18,9 @@
 
   /* align-items: center; */
 }
+imd{
+  display: block;
+}
 
 section {
   /* padding: 115px 0 40px; */
@@ -35,6 +38,9 @@ section {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+.spinner {
+  box-shadow: rgba(0,0,0,.7) 0 0 0 1000px;
 }
 
 @media screen and (min-width: 375px) {

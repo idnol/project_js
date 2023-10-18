@@ -64,63 +64,62 @@
   letter-spacing: -0.56px;
 }
 
-.swiper-button-down {
-  position: absolute;
-  left: 50%;
-
-  bottom: 0;
-
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: var(--white);
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-
-  cursor: pointer;
-
-  transition: scale 250ms linear;
-
-  z-index: 2;
-}
-
 .swiper-button-down:hover {
   scale: 1.1;
-}
-
-.swiper-button-up {
-  position: absolute;
-  left: 20%;
-
-  bottom: 20px;
-
-  transform: translate(-50%, -50%);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-color: var(--white);
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-
-  cursor: pointer;
-
-  transition: scale 250ms linear;
-
-  z-index: 2;
-
-  transform: rotate(180deg);
 }
 
 .swiper-button-up:hover {
   scale: 1.1;
 }
+
+.support-swiper .swiper-slide {
+  height: fit-content !important;
+}
+
+.support-swiper-wrapper {
+  height: 300px;
+  overflow: hidden;
+}
+
+.swiper-button {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: scale 250ms linear;
+  z-index: 2;
+}
+
+.swiper-button.swiper-button-up {
+  left: 40% !important;
+  top: 41px;
+  rotate: 180deg;
+}
+
+.swiper-button.swiper-button-down {
+  bottom: 0;
+}
+
+.swiper-button-disabled {
+  opacity: .2;
+}
+.swiper-button-disabled:hover {
+  scale: 1;
+}
+
+.img-wrapper {
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
 
 @media screen and (min-width: 1440px) {
   .slider-wrapper {

@@ -1,8 +1,6 @@
 import { getBooksForCategory } from './api';
-import { renderBookCard } from './book-markup';
-import { wrapLastWordTitle } from './category-books-title';
+import { renderBookCard } from './markup';
 import { refs } from './refs.js';
-
 
 function renderAllBooksInCategory(title) {
   return getBooksForCategory(title)

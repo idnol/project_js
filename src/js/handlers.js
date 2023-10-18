@@ -2,27 +2,37 @@ import { refs } from './refs.js';
 import { renderAllBooksInCategory } from './all-category-books.js';
 import { getTopBooks, getBook } from './api.js';
 import { addToBasket, removeItemFromStorage, setStorage } from './basket.js';
+import { isMenuOpen } from './header.js';
 
 async function clickToCategory(e) {
+  const categories = document.querySelectorAll('.js-category');
   if ( e.target.classList.contains('js-category-button') || e.target.classList.contains('js-category') ) {
     await renderBooks(e);
     if (e.target.classList.contains('js-category')) {
       document.querySelector('.js-all').classList.remove('active')
-      document.querySelectorAll('.js-category').forEach(item => {
+      categories.forEach(item => {
         item.classList.remove('active');
       });
       e.target.classList.add('active');
     }
+    if (e.target.classList.contains('js-category-button')) {
+      document.querySelector('.js-all').classList.remove('active')
+      categories.forEach(item => {
+        if (item.dataset.name === e.target.dataset.name) {
+          item.classList.add('active');
+        }
+      })
+    }
   }
 
   if (e.target.classList.contains('js-all')) {
-    document.querySelectorAll('.js-category').forEach(item => {
+    categories.forEach(item => {
       item.classList.remove('active');
     });
     e.target.classList.add('active')
     document.querySelector('.js-category-list').remove();
     const title = document.createElement('h1');
-    title.classList.add('books-title');
+    title.classList.add('books-category-title');
     title.innerHTML = 'Best Sellers <span>Books</span>';
     const wrapper = document.createElement('div');
     wrapper.classList.add('books-wrapper', 'js-book-categories');
@@ -84,4 +94,18 @@ async function onModalBtnAddClick(e) {
   }
 }
 
-export {clickToCategory, handlerBookClick, handlerBookScroll, closeModal, toggleModal, onModalBtnAddClick}
+function closeMobileMenuToDesktop(e) {
+  if (window.innerWidth > 768) {
+    matchMedia(e);
+  }
+}
+
+function toggleMenu() {
+  refs.openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+  refs.mobileMenu.classList.toggle('is-open');
+  refs.closeMenuBtn.classList.toggle('visually-hidden');
+  refs.openMenuBtn.classList.toggle('visually-hidden');
+}
+
+
+export {clickToCategory, handlerBookClick, handlerBookScroll, closeModal, toggleModal, onModalBtnAddClick, closeMobileMenuToDesktop, toggleMenu}
