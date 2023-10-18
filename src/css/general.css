@@ -18,6 +18,9 @@
 
   /* align-items: center; */
 }
+imd{
+  display: block;
+}
 
 section {
   /* padding: 115px 0 40px; */

@@ -42,11 +42,13 @@ async function getBooksFromBasket(item) {
 
 function setupRemove() {
   refs.modalBtnAdd.textContent = 'remove from the shopping list';
+  refs.modalTextInfo.classList.remove('hidden')
   refs.modalBtnAdd.classList.add('remove');
 }
 
 function setupAdd() {
   refs.modalBtnAdd.textContent = 'Add to shopping list';
+  refs.modalTextInfo.classList.add('hidden')
   refs.modalBtnAdd.classList.remove('remove');
 }
 

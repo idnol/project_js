@@ -65,9 +65,11 @@ async function renderCardModal(idBook) {
           <h2>${book.title}</h2>
           <p class="author">${book.author}</p>
           <p class="module-description">${book.description}</p>
-          <div class='buttons-wrapper'>
+
+          <div class='link-wrapper'>
           <a class="amazon" href="${book.amazon_product_url}"></a>
           <a class="book" href="${apple.url}"></a>
+
           </div>
           </div>`
 }
