@@ -1,4 +1,4 @@
-import{r as n,s as O}from"./header-f1d3767a.js";function v(o){return o.length===0?`<li class="block-not-book">
+import{r as n,s as O}from"./header-964f747c.js";function v(o){return o.length===0?`<li class="block-not-book">
             <h3 class="block-not-book_title">This page is empty, add some books and proceed to order.</h3>
             <div class='img'></div>
         </li>`:o.map(t=>`<li class="shopping-list_book-item book">
