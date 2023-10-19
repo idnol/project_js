@@ -7,6 +7,7 @@
   height: 19px;
   filter: grayscale(100%);
 }
+
 .amazon-m:hover {
   filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
 }
@@ -46,7 +47,7 @@
   top: 0;
   left: 0;
   background: rgba(17, 17, 17, 0.4);
-  z-index: 1;
+  z-index: 11;
 }
 
 .js-modal {
@@ -66,8 +67,14 @@
   border: 2px solid rgba(17, 17, 17, 1);
   border-radius: 18px;
   background-color: #fff;
-  z-index: 2;
+  z-index: 12;
 }
+
+.dark-theme .js-modal {
+  background-color: var(--black-body);
+  border: 2px solid #fff;
+}
+
 .modal-book-image {
   width: 287px;
   height: 408px;
@@ -85,6 +92,11 @@
   letter-spacing: -0.64px;
   margin-bottom: 4px;
 }
+
+.dark-theme .block-info h2 {
+  color: var(--white);
+}
+
 .author {
   color: #b4afaf;
   font-family: DM Sans;
@@ -110,6 +122,10 @@
   background-color: #fff;
 }
 
+.dark-theme .module-close-btn {
+  background-color: var(--black-body);
+}
+
 .module-description {
   color: #111;
   font-family: DM Sans;
@@ -121,9 +137,22 @@
   margin-bottom: 14px;
 }
 
+.dark-theme .module-description {
+  color: var(--white);
+}
+
 .module-vector {
   width: 26px;
   height: 26px;
+}
+
+.dark-theme .module-vector {
+  filter: invert(100%) sepia(0%) saturate(7463%) hue-rotate(380deg)
+    brightness(119%) contrast(115%);
+}
+
+.module-vector:hover {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
 }
 
 .btn-module-add {
@@ -143,12 +172,19 @@
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.dark-theme .btn-module-add {
+  background: var(--black-body);
+  color: var(--white);
+}
+
 .btn-module-add:hover,
 .btn-module-add:focus {
   color: white;
   background-color: #4f2ee8;
   box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.15);
 }
+
 .modal-links {
   gap: 20px;
   display: flex;
@@ -174,12 +210,32 @@
   background: url('../img/amazon-img-m.png');
 }
 
+.block-modal-info .amazon:hover {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.dark-theme .amazon {
+  filter: invert(12%);
+}
+
+.dark-theme .amazon:hover {
+  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
+}
+
 .block-modal-info .book,
 .book_buy-links_item .book {
   display: block;
   width: 33px;
   height: 32px;
   background: url('../img/book-image-m.png');
+}
+
+.block-modal-info .book:hover {
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.35));
+}
+
+.dark-theme .book:hover {
+  filter: drop-shadow(0px 3px 3px rgba(255, 255, 255, 0.35));
 }
 
 .modal-text-info {
@@ -193,6 +249,9 @@
   letter-spacing: -0.4px;
   width: 242px;
   margin: 8px auto 0 auto;
+}
+.dark-theme .modal-text-info {
+  color: rgba(255, 255, 255, 0.5);
 }
 
 @media screen and (min-width: 768px) {

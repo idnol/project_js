@@ -313,7 +313,7 @@
 .block-not-book .img {
   width: 322px;
   height: 241px;
-  background: url("../img/shopping-list.bg.png") no-repeat;
+  background: url('../img/shopping-list.bg.png') no-repeat;
 }
 @media (min-width: 768px) {
   .pagination {
